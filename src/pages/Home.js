@@ -2,17 +2,8 @@ import React from "react";
 import bg from "../assets/imgs/bg.jpg";
 import img from "../assets/imgs/img_1.jpg";
 import Footer from "../components/Footer/Footer";
-import { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
-const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
-];
 
-export default function Example() {
+export default function Home() {
   return (
     <>
       <div className="relative bg-white dark:bg-gray-900  md:h-[88vh]">
@@ -70,7 +61,7 @@ export default function Example() {
           <img
             className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
             src={bg}
-            alt="example image"
+            alt="example"
           />
         </div>
       </div>
@@ -363,7 +354,7 @@ export default function Example() {
               <img
                 class="w-[28rem] h-[28rem] object-cover xl:w-[34rem] xl:h-[34rem] rounded-full"
                 src={img}
-                alt=""
+                alt="example"
               />
             </div>
           </div>
