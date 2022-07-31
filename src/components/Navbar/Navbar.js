@@ -61,9 +61,9 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Popover className="relative bg-white h-[12vh] z-50 dark:bg-gray-900">
+    <Popover className="relative bg-white h-[12vh] z-50 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center border-b-2 border-gray-100 dark:border-gray-500 py-6 md:justify-start md:space-x-10">
+        <div className="flex justify-between items-center border-b-2 border-gray-100  py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="/">
               <span className="sr-only">Workflow</span>
@@ -71,7 +71,7 @@ export default function Navbar() {
             </a>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
-            <Popover.Button className="bg-white dark:bg-gray-700 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+            <Popover.Button className="bg-white  rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
               <span className="sr-only">Open menu</span>
               <MenuIcon className="h-6 w-6 " aria-hidden="true" />
             </Popover.Button>
@@ -87,7 +87,7 @@ export default function Navbar() {
               href="/Salons"
               className="text-base font-medium text-gray-500 hover:text-[#318CE7]"
             >
-              SALONS
+              Nouvelles
             </a>
 
             <Popover className="relative">
@@ -96,7 +96,7 @@ export default function Navbar() {
                   <Popover.Button
                     className={classNames(
                       open ? "text-gray-900" : "text-gray-500",
-                      "group bg-white dark:bg-gray-900 rounded-md inline-flex items-center text-base font-medium hover:text-[#318CE7] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:[#318CE7]"
+                      "group bg-white  rounded-md inline-flex items-center text-base font-medium hover:text-[#318CE7] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:[#318CE7]"
                     )}
                   >
                     <span>RECRUTEMENT</span>
@@ -214,14 +214,14 @@ export default function Navbar() {
           focus
           className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50"
         >
-          <div className="dark:bg-gray-900 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+          <div className=" rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div>
                   <img className="h-8 w-auto" src={lg} alt="samablue logo" />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="bg-white dark:bg-gray-700 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                  <Popover.Button className="bg-white  rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                     <span className="sr-only">Close menu</span>
                     <XIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -233,13 +233,13 @@ export default function Navbar() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-gray-500"
+                      className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 "
                     >
                       <item.icon
                         className="flex-shrink-0 h-6 w-6 text-blue-600"
                         aria-hidden="true"
                       />
-                      <span className="ml-3 text-base font-medium text-gray-900 dark:text-gray-400">
+                      <span className="ml-3 text-base font-medium text-gray-900 ">
                         {item.name}
                       </span>
                     </a>
@@ -251,20 +251,20 @@ export default function Navbar() {
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <a
                   href="/"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700 dark:text-gray-400"
+                  className="text-base font-medium text-gray-900 hover:text-gray-700 "
                 >
                   Home
                 </a>
 
                 <a
                   href={() => false}
-                  className="text-base font-medium text-gray-900 hover:text-gray-700 dark:text-gray-400"
+                  className="text-base font-medium text-gray-900 hover:text-gray-700 "
                 >
                   About us
                 </a>
                 <a
                   href={() => false}
-                  className="text-base font-medium text-gray-900 hover:text-gray-700 dark:text-gray-400"
+                  className="text-base font-medium text-gray-900 hover:text-gray-700 "
                 >
                   Contact
                 </a>

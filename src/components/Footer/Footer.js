@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-white dark:bg-gray-800 pt-7">
+      <footer className="bg-white  pt-7">
         <div className="container px-6 py-4 mx-auto">
           <div className="lg:flex">
             <div className="w-full -mx-6 lg:w-2/5">
@@ -11,7 +11,7 @@ const Footer = () => {
                 <div>
                   <a
                     href="/"
-                    className="text-xl font-bold text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300"
+                    className="text-xl font-bold text-gray-800  hover:text-gray-700"
                   >
                     <svg
                       width="270"
@@ -19,7 +19,7 @@ const Footer = () => {
                       viewBox="0 0 305 58"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      className="text-gray-900 dark:text-gray-100"
+                      className="text-gray-900 "
                     >
                       <path
                         fill-rule="evenodd"
@@ -75,7 +75,7 @@ const Footer = () => {
                   </a>
                 </div>
                 {/* not complet */}
-                <p className="max-w-md mt-2 text-gray-500 dark:text-gray-400">
+                <p className="max-w-md mt-2 text-gray-500 ">
                   Join 31,000+ other and never miss out on new tips, tutorials,
                   and more.
                 </p>
@@ -83,7 +83,7 @@ const Footer = () => {
                 <div className="flex mt-4 -mx-2">
                   <a
                     href={() => false}
-                    className="mx-2 text-gray-700 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400"
+                    className="mx-2 text-gray-700  hover:text-gray-600 "
                     aria-label="Linkden"
                   >
                     <svg className="w-4 h-4 fill-current" viewBox="0 0 512 512">
@@ -93,7 +93,7 @@ const Footer = () => {
 
                   <a
                     href={() => false}
-                    className="mx-2 text-gray-700 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400"
+                    className="mx-2 text-gray-700  hover:text-gray-600 "
                     aria-label="Facebook"
                   >
                     <svg className="w-4 h-4 fill-current" viewBox="0 0 512 512">
@@ -103,7 +103,7 @@ const Footer = () => {
 
                   <a
                     href={() => false}
-                    className="mx-2 text-gray-700 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400"
+                    className="mx-2 text-gray-700  hover:text-gray-600 "
                     aria-label="Twitter"
                   >
                     <svg className="w-4 h-4 fill-current" viewBox="0 0 512 512">
@@ -117,85 +117,95 @@ const Footer = () => {
             <div className="mt-6 lg:mt-0 lg:flex-1">
               <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
                 <div>
-                  <h3 className="text-gray-700 uppercase dark:text-white">
-                    About
-                  </h3>
+                  <h3 className="text-gray-700 uppercase">Navigation</h3>
                   <a
-                    href={() => false}
-                    className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
+                    href="/"
+                    className="block mt-2 text-sm text-gray-600  hover:underline"
                   >
-                    Company
+                    ACCUEIL
                   </a>
                   <a
                     href={() => false}
-                    className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
+                    className="block mt-2 text-sm text-gray-600  hover:underline"
                   >
-                    community
+                    SALONS
                   </a>
                   <a
                     href={() => false}
-                    className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
+                    className="block mt-2 text-sm text-gray-600  hover:underline"
                   >
-                    Careers
+                    RECRUTEMENT
+                  </a>
+                  <a
+                    href={() => false}
+                    className="block mt-2 text-sm text-gray-600  hover:underline"
+                  >
+                    À PROPOS DE NOUS
+                  </a>
+                  <a
+                    href={() => false}
+                    className="block mt-2 text-sm text-gray-600 hover:underline"
+                  >
+                    GALERIE
+                  </a>
+                  <a
+                    href={() => false}
+                    className="block mt-2 text-sm text-gray-600 hover:underline"
+                  >
+                    CONTACTEZ NOUS
                   </a>
                 </div>
 
                 <div>
-                  <h3 className="text-gray-700 uppercase dark:text-white">
-                    Blog
-                  </h3>
+                  <h3 className="text-gray-700 uppercase ">Blog</h3>
                   <a
                     href={() => false}
-                    className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
+                    className="block mt-2 text-sm text-gray-600 hover:underline"
                   >
                     Tec
                   </a>
                   <a
                     href={() => false}
-                    className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
+                    className="block mt-2 text-sm text-gray-600  hover:underline"
                   >
                     Music
                   </a>
                   <a
                     href={() => false}
-                    className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
+                    className="block mt-2 text-sm text-gray-600 hover:underline"
                   >
                     Videos
                   </a>
                 </div>
 
                 <div>
-                  <h3 className="text-gray-700 uppercase dark:text-white">
-                    Products
-                  </h3>
+                  <h3 className="text-gray-700 uppercase ">Products</h3>
                   <a
                     href={() => false}
-                    className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
+                    className="block mt-2 text-sm text-gray-600 hover:underline"
                   >
                     Mega cloud
                   </a>
                   <a
                     href={() => false}
-                    className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
+                    className="block mt-2 text-sm text-gray-600 hover:underline"
                   >
                     Aperion UI
                   </a>
                   <a
                     href={() => false}
-                    className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
+                    className="block mt-2 text-sm text-gray-600 hover:underline"
                   >
                     Meraki UI
                   </a>
                 </div>
 
                 <div>
-                  <h3 className="text-gray-700 uppercase dark:text-white">
-                    Contact
-                  </h3>
-                  <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">
+                  <h3 className="text-gray-700 uppercase ">Contact</h3>
+                  <span className="block mt-2 text-sm text-gray-600 hover:underline">
                     +1 526 654 8965
                   </span>
-                  <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">
+                  <span className="block mt-2 text-sm text-gray-600 hover:underline">
                     example@email.com
                   </span>
                 </div>
@@ -203,10 +213,10 @@ const Footer = () => {
             </div>
           </div>
 
-          <hr className="h-px my-6 bg-gray-300 border-none dark:bg-gray-700" />
+          <hr className="h-px my-6 bg-gray-300 border-none " />
 
           <div>
-            <p className="text-center text-gray-800 dark:text-white">
+            <p className="text-center text-gray-800 ">
               © SAMABLUE 2022 - All rights reserved
             </p>
           </div>

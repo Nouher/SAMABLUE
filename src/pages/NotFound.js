@@ -3,7 +3,7 @@ import React from "react";
 const NotFound = () => {
   return (
     <div
-      className="text-gray-900 dark:bg-gray-900 dark:text-gray-400"
+      className="text-gray-900 "
       style={{
         fontSize: 60,
         height: "90vh",

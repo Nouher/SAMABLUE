@@ -6,11 +6,11 @@ import Footer from "../components/Footer/Footer";
 export default function Home() {
   return (
     <>
-      <div className="relative bg-white dark:bg-gray-900  md:h-[88vh]">
+      <div className="relative bg-white md:h-[88vh]">
         <div className="max-w-7xl mx-auto ">
-          <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32 dark:bg-gray-900">
+          <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32 ">
             <svg
-              className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white dark:text-gray-900 transform translate-x-1/2"
+              className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white  transform translate-x-1/2"
               fill="currentColor"
               viewBox="0 0 100 100"
               preserveAspectRatio="none"
@@ -22,7 +22,7 @@ export default function Home() {
             <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-0 md:py-20">
               <div className="sm:text-center lg:text-left">
                 <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl md:pt-28">
-                  <span className=" xl:inline dark:text-gray-100">
+                  <span className=" xl:inline ">
                     La Solution 360 Degrés pour{" "}
                   </span>
                   <span className=" text-[#318CE7] xl:inline">
@@ -67,10 +67,10 @@ export default function Home() {
       </div>
       {/*Section 2*/}
 
-      <section class="text-gray-600 body-font dark:bg-gray-900">
+      <section class="text-gray-600 body-font ">
         <div class="container px-5 py-24 mx-auto ">
           <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900 dark:text-gray-100">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900 ">
               Pourquoi nous choisir
             </h1>
             <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">
@@ -96,7 +96,7 @@ export default function Home() {
                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                   </svg>
                 </div>
-                <h2 class="text-lg text-gray-900 font-medium title-font mb-2 dark:text-gray-100">
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-2 ">
                   Concepts intelligents d'installations sur mesure au profit du
                   client
                 </h2>
@@ -119,7 +119,7 @@ export default function Home() {
                     <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
                   </svg>
                 </div>
-                <h2 class="text-lg text-gray-900 font-medium title-font mb-2 dark:text-gray-100">
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-2 ">
                   Ingénierie de base et fine interne, y compris la conception
                   statique des structures en acier
                 </h2>
@@ -141,7 +141,7 @@ export default function Home() {
                     <circle cx="12" cy="7" r="4"></circle>
                   </svg>
                 </div>
-                <h2 class="text-lg text-gray-900 font-medium title-font mb-2 dark:text-gray-100">
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-2 ">
                   Conception industrielle du processus de fabrication
                 </h2>
               </div>
@@ -161,7 +161,7 @@ export default function Home() {
                     <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"></path>
                   </svg>
                 </div>
-                <h2 class="text-lg text-gray-900 font-medium title-font mb-2 dark:text-gray-100">
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-2 ">
                   Une attention particulière pour l'efficacité de fonctionnement
                   et l'économie d'énergie
                 </h2>
@@ -182,7 +182,7 @@ export default function Home() {
                     <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
                   </svg>
                 </div>
-                <h2 class="text-lg text-gray-900 font-medium title-font mb-2 dark:text-gray-100">
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-2 ">
                   Ingénieries allemande et espagnol, fabriquée en Europe
                 </h2>
               </div>
@@ -202,7 +202,7 @@ export default function Home() {
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                   </svg>
                 </div>
-                <h2 class="text-lg text-gray-900 font-medium title-font mb-2 dark:text-gray-100">
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-2 ">
                   Entreprise familiale, hiérarchie courte, décisions rapides,
                   engagement fort
                 </h2>
@@ -214,13 +214,14 @@ export default function Home() {
 
       {/* Section 3 */}
 
-      <section class="bg-white dark:bg-gray-900">
+      <section class="bg-white ">
         <div class="container px-6 py-10 mx-auto">
           <div class="lg:flex lg:items-center">
             <div class="w-full space-y-12 lg:w-1/2 ">
               <div>
-                <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">
-                  explore our <br /> awesome Components
+                <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl ">
+                  Plus de 45 ans d’expérience dans <br /> la conception, la
+                  production et le montage de SILOS en tôle d’acier galvanisé
                 </h1>
 
                 <div class="mt-2">
@@ -231,7 +232,7 @@ export default function Home() {
               </div>
 
               <div class="md:flex md:items-start md:-mx-4">
-                <span class="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
+                <span class="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="w-6 h-6"
@@ -249,11 +250,11 @@ export default function Home() {
                 </span>
 
                 <div class="mt-4 md:mx-4 md:mt-0">
-                  <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">
+                  <h1 class="text-2xl font-semibold text-gray-700 capitalize ">
                     INSTALLATION
                   </h1>
 
-                  <p class="mt-3 text-gray-500 dark:text-gray-300">
+                  <p class="mt-3 text-gray-500 ">
                     Les silos SAMABLUE sont conçus de manière modulaire, ce qui
                     facilite grandement leur assemblage. Grâce à la qualité des
                     matériaux utilisés pour leur fabrication et à une équipe de
@@ -267,7 +268,7 @@ export default function Home() {
               </div>
 
               <div class="md:flex md:items-start md:-mx-4">
-                <span class="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
+                <span class="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="w-6 h-6"
@@ -285,11 +286,11 @@ export default function Home() {
                 </span>
 
                 <div class="mt-4 md:mx-4 md:mt-0">
-                  <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">
+                  <h1 class="text-2xl font-semibold text-gray-700 capitalize ">
                     PRODUCTION
                   </h1>
 
-                  <p class="mt-3 text-gray-500 dark:text-gray-300">
+                  <p class="mt-3 text-gray-500 ">
                     Nos silos sont produits avec une technologie de pointe et
                     nous n’hésitons pas à opter pour une qualité supérieure dans
                     le choix des matières premières. Les aciers que nous
@@ -305,7 +306,7 @@ export default function Home() {
               </div>
 
               <div class="md:flex md:items-start md:-mx-4">
-                <span class="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
+                <span class="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="w-6 h-6"
@@ -329,11 +330,11 @@ export default function Home() {
                 </span>
 
                 <div class="mt-4 md:mx-4 md:mt-0">
-                  <h1 class="text-2xl font-semibold text-gray-700 capitalize dark:text-white">
+                  <h1 class="text-2xl font-semibold text-gray-700 capitalize ">
                     CONCEPTION
                   </h1>
 
-                  <p class="mt-3 text-gray-500 dark:text-gray-300">
+                  <p class="mt-3 text-gray-500 ">
                     Notre service de conception dispose d’une équipe
                     d’ingénieurs spécialisés, qui travaillent au cas par cas et
                     aux côtés du client, lui prêtent un service strictement
@@ -359,12 +360,12 @@ export default function Home() {
             </div>
           </div>
 
-          <hr class="border-gray-200 my-12 dark:border-gray-700" />
+          <hr class="border-gray-200 my-12 " />
 
           <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
             {/* <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
               <svg
-                class="h-12 text-gray-500 fill-current dark:text-gray-300"
+                class="h-12 text-gray-500 fill-current "
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 266 100"
               >
@@ -375,7 +376,7 @@ export default function Home() {
 
             <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
               <svg
-                class="h-10 text-gray-500 fill-current dark:text-gray-300"
+                class="h-10 text-gray-500 fill-current "
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 viewBox="0 0 316 60"
@@ -400,7 +401,7 @@ export default function Home() {
 
             <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
               <svg
-                class="h-8 mt-2 text-gray-500 fill-current dark:text-gray-300"
+                class="h-8 mt-2 text-gray-500 fill-current "
                 viewBox="0 0 398 120"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -413,7 +414,7 @@ export default function Home() {
 
             <div class="flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1">
               <svg
-                class="h-5 mt-1 text-gray-500 fill-current dark:text-gray-300"
+                class="h-5 mt-1 text-gray-500 fill-current "
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 278.7 36.3"
               >
@@ -428,7 +429,7 @@ export default function Home() {
 
             <div class="flex items-center justify-center col-span-2 md:col-span-3 lg:col-span-1">
               <svg
-                class="h-8 text-gray-500 fill-current dark:text-gray-300"
+                class="h-8 text-gray-500 fill-current "
                 viewBox="0 0 2270 546"
                 xmlns="http://www.w3.org/2000/svg"
               >
