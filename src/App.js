@@ -4,10 +4,12 @@ import NotFound from "./pages/NotFound";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Banner from "./components/Banner";
 
 function App() {
   return (
     <Router>
+      <Banner />
       <Navbar />
       <Routes>
         <Route path="/" exact element={<Home />} />

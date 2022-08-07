@@ -6,7 +6,7 @@ import Footer from "../components/Footer/Footer";
 export default function Home() {
   return (
     <>
-      <div className="relative bg-white md:h-[88vh]">
+      <div className="relative bg-white md:h-[95vh]">
         <div className="max-w-7xl mx-auto ">
           <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32 ">
             <svg
@@ -57,9 +57,9 @@ export default function Home() {
             </main>
           </div>
         </div>
-        <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+        <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 overflow-hidden">
           <img
-            className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+            className="movement-img h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
             src={bg}
             alt="example"
           />
@@ -69,15 +69,14 @@ export default function Home() {
 
       <section class="text-gray-600 body-font ">
         <div class="container px-5 py-24 mx-auto ">
-          <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900 ">
-              Pourquoi nous choisir
+          <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center ">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-[#318CE7] font-bold">
+              Pourquoi nous choisir ?
             </h1>
             <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">
               SAMABLUE possède une vaste expérience internationale dans la
               gestion de grands projets avec un portefeuille complet pour la
-              manutention, le stockage et la transformation du grain. Toujours
-              fidèle à notre proposition de valeur.
+              manutention.
             </p>
           </div>
           <div class="flex flex-wrap -m-4">
