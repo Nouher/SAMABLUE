@@ -7,59 +7,55 @@ export default function Home() {
   return (
     <>
       <div className="relative bg-white md:h-[95vh]">
-        <div className="max-w-7xl mx-auto ">
-          <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32 ">
-            <svg
-              className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white  transform translate-x-1/2"
-              fill="currentColor"
-              viewBox="0 0 100 100"
-              preserveAspectRatio="none"
-              aria-hidden="true"
+        <div className="absolute z-40 mt-28 md:mt-10 ">
+          <h1 className="text-[36px] tracking-tight font-extrabold text-gray-900 md:text-[60px] pt-[80px] md:pt-40 text-center mb-10">
+            <span
+              className=" xl:inline text-white"
+              style={{ textShadow: "2px 4px 3px rgba(0,0,0,0.3)" }}
             >
-              <polygon points="50,0 100,0 50,100 0,100" />
-            </svg>
-
-            <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-0 md:py-20">
-              <div className="sm:text-center lg:text-left">
-                <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl md:pt-28">
-                  <span className=" xl:inline ">
-                    La Solution 360 Degrés pour{" "}
-                  </span>
-                  <span className=" text-[#318CE7] xl:inline">
-                    votre stockage
-                  </span>
-                </h1>
-                <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  SAMABLUE possède une vaste expérience internationale dans la
-                  gestion de grands projets avec un portefeuille complet pour la
-                  manutention, le stockage et la transformation du grain.
-                  Toujours fidèle à notre proposition de valeur.
-                </p>
-                <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                  <div className="rounded-md shadow cursor-pointer">
-                    <a
-                      href={() => false}
-                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#318CE7] hover:bg-[#318Cc9] md:py-4 md:text-lg md:px-10"
-                    >
-                      Commencer
-                    </a>
-                  </div>
-                  <div className="mt-3 sm:mt-0 sm:ml-3 cursor-pointer">
-                    <a
-                      href="/About"
-                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-[#318CE7] bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10"
-                    >
-                      Plus sur nous
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </main>
+              La solution 360° pour{" "}
+            </span>
+            <span
+              className=" text-[#318CE7] xl:inline"
+              style={{ textShadow: "2px 4px 3px rgba(0,0,0,0.3)" }}
+            >
+              le stockage de votre céréale
+            </span>
+          </h1>
+          <p
+            className="mt-3 text-base text-gray-200 px-[10px] md:px-[300px] py-3 md:mt-5 md:text-[23px] text-center leading-6 md:leading-8"
+            style={{ textShadow: "2px 4px 3px rgba(0,0,0,0.3)" }}
+          >
+            SAMABLUE possède une vaste expérience internationale dans la gestion
+            de grands projets avec un portefeuille complet pour la manutention,
+            le stockage et la transformation du grain. Toujours fidèle à notre
+            proposition de valeur.
+          </p>
+          <div className="mt-5 sm:mt-8 flex justify-center items-start	gap-5">
+            <div className="rounded-md shadow cursor-pointer">
+              <a
+                href={() => false}
+                style={{ boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)" }}
+                className="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#318CE7] hover:bg-[#318Cc9] md:py-4 md:text-lg md:c"
+              >
+                Commencer
+              </a>
+            </div>
+            <div className="cursor-pointer">
+              <a
+                href="/About"
+                style={{ boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)" }}
+                className="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-[#318CE7] bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10"
+              >
+                Plus sur nous
+              </a>
+            </div>
           </div>
         </div>
-        <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 overflow-hidden">
+
+        <div className="lg:absolute h-[95vh] w-full overflow-hidden">
           <img
-            className="movement-img h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+            className="movement-img h-[100vh] w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
             src={bg}
             alt="example"
           />
@@ -74,9 +70,10 @@ export default function Home() {
               Pourquoi nous choisir ?
             </h1>
             <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">
-              SAMABLUE possède une vaste expérience internationale dans la
-              gestion de grands projets avec un portefeuille complet pour la
-              manutention.
+              <span className="text-[#318CE7] font-semibold	">SAMA</span>
+              <span className="text-[#E8BD5E] font-semibold	">BLUE </span>
+              possède une vaste expérience internationale dans la gestion de
+              grands projets avec un portefeuille complet pour la manutention.
             </p>
           </div>
           <div class="flex flex-wrap -m-4">

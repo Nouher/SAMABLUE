@@ -11,42 +11,91 @@ import {
   ViewGridIcon,
   XIcon,
   HomeIcon,
+  DatabaseIcon,
+  CollectionIcon,
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import lg from "../../assets/icons/samablueg.svg";
 
+const Recrutement = [
+  {
+    name: "La logistique",
+    description: "",
+    href: "#",
+    icon: ShieldCheckIcon,
+  },
+];
 const services = [
   {
-    name: "First Services",
-    description:
-      "Get a better understanding of where your traffic is coming from.",
-    href: "#",
-    icon: HomeIcon,
-  },
-  {
-    name: "Engagement",
-    description: "Speak directly to your customers in a more meaningful way.",
-    href: "#",
-    icon: CursorClickIcon,
-  },
-  {
-    name: "Security",
-    description: "Your customers' data will be safe and secure.",
+    name: "La logistique",
+    description: "",
     href: "#",
     icon: ShieldCheckIcon,
   },
   {
-    name: "Integrations",
-    description: "Connect with third-party tools that you're already using.",
+    name: "le montage",
+    description: "",
+    href: "#",
+    icon: CursorClickIcon,
+  },
+  {
+    name: "le bureau d'études",
+    description: "",
+    href: "#",
+    icon: HomeIcon,
+  },
+];
+
+const stockage = [
+  {
+    name: "Silos à fond plat",
+    description: "",
+    href: "#",
+    icon: HomeIcon,
+  },
+  {
+    name: "Silos à fond conique",
+    description: "",
+    href: "#",
+    icon: CursorClickIcon,
+  },
+  {
+    name: "Stockage Intérieur",
+    description: "",
+    href: "#",
+    icon: ShieldCheckIcon,
+  },
+  {
+    name: "Silos de Ferme",
+    description: "",
     href: "#",
     icon: ViewGridIcon,
   },
   {
-    name: "Automations",
-    description:
-      "Build strategic funnels that will drive your customers to convert",
+    name: "Accessiores",
+    description: "",
     href: "#",
     icon: RefreshIcon,
+  },
+  {
+    name: "Dépôts",
+    description: "",
+    href: "#",
+    icon: RefreshIcon,
+  },
+];
+const Manutention = [
+  {
+    name: "La manutention à grains fixe",
+    description: "",
+    href: "#",
+    icon: HomeIcon,
+  },
+  {
+    name: "Le convoyeur à chaine",
+    description: "",
+    href: "#",
+    icon: CursorClickIcon,
   },
 ];
 
@@ -62,7 +111,7 @@ function classNames(...classes) {
 export default function Navbar() {
   return (
     <Popover
-      className="fixed w-full bg-white h-[12vh] z-50 "
+      className="fixed w-full bg-[rgba(255,255,255,.8)] md:bg-white h-[12vh] z-50 "
       style={{
         boxShadow:
           "inset 1px 1px 0 rgb(0 0 0 / 10%), inset 0 -1px 0 rgb(0 0 0 / 7%)",
@@ -129,7 +178,7 @@ export default function Navbar() {
                     <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                          {services.map((item) => (
+                          {Recrutement.map((item) => (
                             <a
                               key={item.name}
                               href={item.href}
@@ -225,6 +274,200 @@ export default function Navbar() {
             </a>
           </div>
         </div>
+      </div>
+
+      {/* SubMenu */}
+
+      {/* Stockage */}
+      <div className="bg-[rgba(255,255,255,.7)] h-10 hidden md:flex justify-center md:justify-end items-center pr-0 md:pr-72 mt-[0px] gap-5 ">
+        <Popover className="relative">
+          {({ open }) => (
+            <>
+              <Popover.Button
+                className={classNames(
+                  open ? "text-gray-900" : "text-gray-600",
+                  "group bg-white  rounded-md inline-flex items-center text-base font-medium hover:text-[#318CE7] focus:text-[#318CE7] bg-transparent"
+                )}
+              >
+                <span style={{ fontSize: 15, display: "flex" }}>
+                  <DatabaseIcon className="h-5 w-5 mr-2" /> Stockage
+                </span>
+                <ChevronDownIcon
+                  className={classNames(
+                    open ? "text-gray-600" : "text-gray-400",
+                    "ml-2 h-5 w-5 group-hover:text-[#318CE7] "
+                  )}
+                  aria-hidden="true"
+                />
+              </Popover.Button>
+
+              <Transition
+                as={Fragment}
+                enter="transition ease-out duration-200"
+                enterFrom="opacity-0 translate-y-1"
+                enterTo="opacity-100 translate-y-0"
+                leave="transition ease-in duration-150"
+                leaveFrom="opacity-100 translate-y-0"
+                leaveTo="opacity-0 translate-y-1"
+              >
+                <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                  <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                    <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                      {stockage.map((item) => (
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                        >
+                          <item.icon
+                            className="flex-shrink-0 h-6 w-6 text-[#318CE7]"
+                            aria-hidden="true"
+                          />
+                          <div className="ml-4">
+                            <p className="text-base font-medium text-gray-900">
+                              {item.name}
+                            </p>
+                            {/* <p className="mt-1 text-sm text-gray-500">
+                                  {item.description}
+                                </p> */}
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </Popover.Panel>
+              </Transition>
+            </>
+          )}
+        </Popover>
+
+        {/* Manutention*/}
+
+        <Popover className="relative">
+          {({ open }) => (
+            <>
+              <Popover.Button
+                className={classNames(
+                  open ? "text-gray-900" : "text-gray-600",
+                  "group bg-white  rounded-md inline-flex items-center text-base font-medium hover:text-[#318CE7] focus:text-[#318CE7] bg-transparent"
+                )}
+              >
+                <span style={{ fontSize: 15, display: "flex" }}>
+                  <RefreshIcon className="h-5 w-5 mr-2" />
+                  Manutention
+                </span>
+                <ChevronDownIcon
+                  className={classNames(
+                    open ? "text-gray-500" : "text-gray-400",
+                    "ml-2 h-5 w-5 group-hover:text-[#318CE7]"
+                  )}
+                  aria-hidden="true"
+                />
+              </Popover.Button>
+
+              <Transition
+                as={Fragment}
+                enter="transition ease-out duration-200"
+                enterFrom="opacity-0 translate-y-1"
+                enterTo="opacity-100 translate-y-0"
+                leave="transition ease-in duration-150"
+                leaveFrom="opacity-100 translate-y-0"
+                leaveTo="opacity-0 translate-y-1"
+              >
+                <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                  <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                    <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                      {Manutention.map((item) => (
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                        >
+                          <item.icon
+                            className="flex-shrink-0 h-6 w-6 text-[#318CE7]"
+                            aria-hidden="true"
+                          />
+                          <div className="ml-4">
+                            <p className="text-base font-medium text-gray-900">
+                              {item.name}
+                            </p>
+                            {/* <p className="mt-1 text-sm text-gray-500">
+                                  {item.description}
+                                </p> */}
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </Popover.Panel>
+              </Transition>
+            </>
+          )}
+        </Popover>
+
+        {/* Service */}
+
+        <Popover className="relative">
+          {({ open }) => (
+            <>
+              <Popover.Button
+                className={classNames(
+                  open ? "text-gray-900" : "text-gray-600 ",
+                  "group bg-white  rounded-md inline-flex items-center text-base font-medium hover:text-[#318CE7] focus:text-[#318CE7] bg-transparent"
+                )}
+              >
+                <span style={{ fontSize: 15, display: "flex" }}>
+                  <CollectionIcon className="h-5 w-5 mr-2" />
+                  Service
+                </span>
+                <ChevronDownIcon
+                  className={classNames(
+                    open ? "text-gray-500" : "text-gray-400",
+                    "ml-2 h-5 w-5 group-hover:text-[#318CE7]"
+                  )}
+                  aria-hidden="true"
+                />
+              </Popover.Button>
+
+              <Transition
+                as={Fragment}
+                enter="transition ease-out duration-200"
+                enterFrom="opacity-0 translate-y-1"
+                enterTo="opacity-100 translate-y-0"
+                leave="transition ease-in duration-150"
+                leaveFrom="opacity-100 translate-y-0"
+                leaveTo="opacity-0 translate-y-1"
+              >
+                <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                  <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                    <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                      {services.map((item) => (
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                        >
+                          <item.icon
+                            className="flex-shrink-0 h-6 w-6 text-[#318CE7]"
+                            aria-hidden="true"
+                          />
+                          <div className="ml-4">
+                            <p className="text-base font-medium text-gray-900">
+                              {item.name}
+                            </p>
+                            {/* <p className="mt-1 text-sm text-gray-500">
+                                  {item.description}
+                                </p> */}
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </Popover.Panel>
+              </Transition>
+            </>
+          )}
+        </Popover>
       </div>
 
       <Transition
