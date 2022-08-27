@@ -1,8 +1,9 @@
 import React from "react";
 import bg from "../assets/imgs/bg.jpg";
 import img from "../assets/imgs/img_1.jpg";
+import map_img from "../assets/imgs/map.png";
 import Footer from "../components/Footer/Footer";
-
+import { ClockIcon } from "@heroicons/react/solid";
 export default function Home() {
   return (
     <>
@@ -215,11 +216,6 @@ export default function Home() {
           <div class="lg:flex lg:items-center">
             <div class="w-full space-y-12 lg:w-1/2 ">
               <div>
-                <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl ">
-                  Plus de 45 ans d’expérience dans <br /> la conception, la
-                  production et le montage de SILOS en tôle d’acier galvanisé
-                </h1>
-
                 <div class="mt-2">
                   <span class="inline-block w-40 h-1 rounded-full bg-[#318CE7]"></span>
                   <span class="inline-block w-3 h-1 ml-1 rounded-full bg-[#318CE7]"></span>
@@ -438,6 +434,114 @@ export default function Home() {
                 </g>
               </svg>
             </div> */}
+          </div>
+        </div>
+      </section>
+      {/* section 3 */}
+      <section>
+        <div className="bg-gray-50 ">
+          <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <span className="block">EXPANSION GLOBALE DE</span>
+              <span className="block text-[#318CE7]">SAMABLUE</span>
+              <div class="mt-2">
+                <span class="inline-block w-40 h-1 rounded-full bg-[#318CE7]"></span>
+                <span class="inline-block w-20 h-1 ml-1 rounded-full bg-[#318CE7]"></span>
+                <span class="inline-block w-1 h-1 ml-1 rounded-full bg-[#318CE7]"></span>
+                {/* <span class="inline-block w-1 h-1 ml-1 rounded-full bg-[#318CE7]"></span> */}
+              </div>
+            </h2>
+            <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0 relative">
+              <img src={map_img} alt="map" />
+              <div className="w-3 h-3 bg-[#318CE7] absolute top-[70px] left-[150px] md:top-[120px] md:left-[250px] rounded-full border-2 border-white hover:border-blue-900" />
+              <div className="w-16 h-5 bg-[#318CE7] absolute top-[45px] left-[125px] md:top-[95px] md:left-[225px]rounded border-2 border-white text-white text-xs flex justify-center">
+                Afrique
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* section 4 */}
+
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+              Statistiques de l'année 2022
+            </h1>
+          </div>
+          <div class="flex flex-wrap -m-4 text-center">
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="text-[#318CE7] w-12 h-12 mb-3 inline-block"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M8 17l4 4 4-4m-4-5v9"></path>
+                  <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path>
+                </svg>
+                <h2 class="title-font font-medium text-3xl text-gray-900">
+                  255
+                </h2>
+                <p class="leading-relaxed">TRAVAILLEURS</p>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="text-[#318CE7] w-12 h-12 mb-3 inline-block"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+                </svg>
+                <h2 class="title-font font-medium text-3xl text-gray-900">
+                  1.3K
+                </h2>
+                <p class="leading-relaxed">CLIENTS SATISFAITS</p>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg ">
+                <div className="flex justify-center">
+                  <ClockIcon className="text-[#318CE7] h-14 w-14 pb-1" />
+                </div>
+                <h2 class="title-font font-medium text-3xl text-gray-900">
+                  12 ANS
+                </h2>
+                <p class="leading-relaxed">DES ANNÉES D’EXPÉRIENCE</p>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="text-[#318CE7] w-12 h-12 mb-3 inline-block"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <h2 class="title-font font-medium text-3xl text-gray-900">
+                  24
+                </h2>
+                <p class="leading-relaxed">PAYS</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
