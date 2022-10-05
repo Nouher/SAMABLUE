@@ -30,6 +30,7 @@ const SilosFondConique = () => {
             <img
               class="object-cover w-full h-96 rounded-xl lg:w-4/5"
               src={img}
+              alt=""
             />
           </div>
         </div>
@@ -220,7 +221,7 @@ const SilosFondConique = () => {
             <img
               class="object-cover w-full h-full mx-auto rounded-md lg:max-w-2xl"
               src={img2}
-              alt="glasses photo"
+              alt="glasses"
             />
           </div>
         </div>

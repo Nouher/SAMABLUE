@@ -14,6 +14,7 @@ const Accessoires = () => {
             <img
               class="object-cover object-center lg:w-1/2 lg:mx-6 w-full h-96 rounded-lg lg:h-[36rem]"
               src={img2}
+              alt="reductor_2"
             />
 
             <div class="mt-8 lg:w-1/2 lg:px-6 lg:mt-0">
@@ -103,7 +104,7 @@ const Accessoires = () => {
             <img
               class="h-80 w-80 sm:w-[28rem] sm:h-[28rem] flex-shrink-0 object-cover rounded-full"
               src={img}
-              alt=""
+              alt="lateral_3"
             />
           </div>
         </div>
