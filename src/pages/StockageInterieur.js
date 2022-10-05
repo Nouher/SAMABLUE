@@ -24,6 +24,7 @@ const StockageInterieur = () => {
             <img
               class="object-cover w-full h-96 rounded-xl lg:w-4/5"
               src={img}
+              alt=""
             />
           </div>
         </div>
