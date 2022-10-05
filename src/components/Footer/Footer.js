@@ -3,7 +3,13 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-white  pt-7">
+      <footer
+        className="bg-white  pt-7  bg-gray-100"
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(49,140,231,.5) 15%, rgba(254,207,103,.5) 85%)",
+        }}
+      >
         <div className="container px-6 py-4 mx-auto">
           <div className="lg:flex">
             <div className="w-full -mx-6 lg:w-2/5">
@@ -213,7 +219,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <hr className="h-px my-6 bg-gray-300 border-none " />
+          <hr className="h-px my-6 bg-gray-500 border-none " />
 
           <div>
             <p className="text-center text-gray-800 ">

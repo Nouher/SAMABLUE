@@ -1,12 +1,20 @@
 import React from "react";
 import Footer from "../components/Footer/Footer";
+import Header from "../components/Header";
 
 const Contact = () => {
   return (
     <>
+      <Header title="CONTACTEZ NOUS" />
       <section className="text-gray-600  body-font relative ">
         <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
-          <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+          <div
+            className="lg:w-2/3 md:w-1/2  rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative"
+            style={{
+              background:
+                "linear-gradient(145deg, rgba(49,140,231,1) 15%, rgba(254,207,103,1) 85%)",
+            }}
+          >
             <iframe
               width="100%"
               height="100%"

@@ -35,8 +35,10 @@ export default function Home() {
           <div className="mt-5 sm:mt-8 flex justify-center items-start	gap-5">
             <div className="rounded-md shadow cursor-pointer">
               <a
-                href={() => false}
-                style={{ boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)" }}
+                href="/Logistique"
+                style={{
+                  boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)",
+                }}
                 className="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#318CE7] hover:bg-[#318Cc9] md:py-4 md:text-lg md:c"
               >
                 Commencer
@@ -76,7 +78,9 @@ export default function Home() {
               possède une vaste expérience internationale dans la gestion de
               grands projets avec un portefeuille complet pour la manutention.
             </p>
+            <hr class="my-4 mx-auto w-48 h-1 bg-blue-200 rounded border-0 md:my-10 " />
           </div>
+
           <div class="flex flex-wrap -m-4">
             <div class="xl:w-1/3 md:w-1/2 p-4">
               <div class="border border-gray-200 p-6 rounded-lg">
@@ -454,7 +458,7 @@ export default function Home() {
             <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0 relative">
               <img src={map_img} alt="map" />
               <div className="w-3 h-3 bg-[#318CE7] absolute top-[70px] left-[150px] md:top-[120px] md:left-[250px] rounded-full border-2 border-white hover:border-blue-900" />
-              <div className="w-16 h-5 bg-[#318CE7] absolute top-[45px] left-[125px] md:top-[95px] md:left-[225px]rounded border-2 border-white text-white text-xs flex justify-center">
+              <div className="w-16 h-5 bg-[#318CE7] absolute top-[45px] left-[125px] md:top-[95px] md:left-[225px] rounded border-2 border-white text-white text-xs flex justify-center">
                 Afrique
               </div>
             </div>

@@ -25,65 +25,67 @@ const Recrutement = [
     icon: ShieldCheckIcon,
   },
 ];
+////////////////////
 const services = [
   {
     name: "La logistique",
     description: "",
-    href: "#",
+    href: "Logistique",
     icon: ShieldCheckIcon,
   },
   {
     name: "le montage",
     description: "",
-    href: "#",
+    href: "Montage",
     icon: CursorClickIcon,
   },
   {
     name: "le bureau d'études",
     description: "",
-    href: "#",
+    href: "BureauEtudes",
     icon: HomeIcon,
   },
 ];
-
+///////////////////////////
 const stockage = [
   {
     name: "Silos à fond plat",
     description: "",
-    href: "#",
+    href: "SilosFondPlat",
     icon: HomeIcon,
   },
   {
     name: "Silos à fond conique",
     description: "",
-    href: "#",
+    href: "SilosFondConique",
     icon: CursorClickIcon,
   },
   {
     name: "Stockage Intérieur",
     description: "",
-    href: "#",
+    href: "StockageInterieur",
     icon: ShieldCheckIcon,
   },
   {
     name: "Silos de Ferme",
     description: "",
-    href: "#",
+    href: "SilosFerme",
     icon: ViewGridIcon,
   },
   {
     name: "Accessiores",
     description: "",
-    href: "#",
+    href: "Accessoires",
     icon: RefreshIcon,
   },
   {
-    name: "Dépôts",
+    name: "Réservoirs",
     description: "",
-    href: "#",
+    href: "Reservoirs",
     icon: RefreshIcon,
   },
 ];
+///////////////////////////////
 const Manutention = [
   {
     name: "La manutention à grains fixe",
@@ -98,7 +100,7 @@ const Manutention = [
     icon: CursorClickIcon,
   },
 ];
-
+///////////////////////////////
 const callsToAction = [
   { name: "Watch Demo", href: "#", icon: PlayIcon },
   { name: "Contact Sales", href: "#", icon: PhoneIcon },
@@ -109,6 +111,12 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+  window.addEventListener("scroll", () => {
+    document
+      .getElementById("submenu")
+      .classList.toggle("submenutransform", window.scrollY > 1);
+  });
+
   return (
     <Popover
       className="fixed w-full bg-[rgba(255,255,255,.8)] md:bg-white h-[12vh] z-50 "
@@ -140,7 +148,7 @@ export default function Navbar() {
               ACCUEIL
             </a>
             <a
-              href="/Salons"
+              href="/News"
               className="text-base font-medium text-gray-500 hover:text-[#318CE7]"
               style={{ fontSize: 15 }}
             >
@@ -279,197 +287,201 @@ export default function Navbar() {
       {/* SubMenu */}
 
       {/* Stockage */}
-      <div className="bg-[rgba(255,255,255,.7)] h-10 hidden md:flex justify-center md:justify-end items-center pr-0 md:pr-72 mt-[0px] gap-5 ">
-        <Popover className="relative">
-          {({ open }) => (
-            <>
-              <Popover.Button
-                className={classNames(
-                  open ? "text-gray-900" : "text-gray-600",
-                  "group bg-white  rounded-md inline-flex items-center text-base font-medium hover:text-[#318CE7] focus:text-[#318CE7] bg-transparent"
-                )}
-              >
-                <span style={{ fontSize: 15, display: "flex" }}>
-                  <DatabaseIcon className="h-5 w-5 mr-2" /> Stockage
-                </span>
-                <ChevronDownIcon
+      <div>
+        <div
+          id="submenu"
+          className="bg-[rgba(255,255,255,.8)] h-10 hidden md:flex justify-center md:justify-end items-center mt-[0px] gap-5 p-6 fixed right-[100px] top-[140px] rounded-md"
+        >
+          <Popover className="relative">
+            {({ open }) => (
+              <>
+                <Popover.Button
                   className={classNames(
-                    open ? "text-gray-600" : "text-gray-400",
-                    "ml-2 h-5 w-5 group-hover:text-[#318CE7] "
+                    open ? "text-gray-900" : "text-gray-600",
+                    "group bg-white  rounded-md inline-flex items-center text-base font-medium hover:text-[#318CE7] focus:text-[#318CE7] bg-transparent"
                   )}
-                  aria-hidden="true"
-                />
-              </Popover.Button>
+                >
+                  <span style={{ fontSize: 15, display: "flex" }}>
+                    <DatabaseIcon className="h-5 w-5 mr-2" /> Stockage
+                  </span>
+                  <ChevronDownIcon
+                    className={classNames(
+                      open ? "text-gray-600" : "text-gray-400",
+                      "ml-2 h-5 w-5 group-hover:text-[#318CE7] "
+                    )}
+                    aria-hidden="true"
+                  />
+                </Popover.Button>
 
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-200"
-                enterFrom="opacity-0 translate-y-1"
-                enterTo="opacity-100 translate-y-0"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100 translate-y-0"
-                leaveTo="opacity-0 translate-y-1"
-              >
-                <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
-                  <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                    <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                      {stockage.map((item) => (
-                        <a
-                          key={item.name}
-                          href={item.href}
-                          className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
-                        >
-                          <item.icon
-                            className="flex-shrink-0 h-6 w-6 text-[#318CE7]"
-                            aria-hidden="true"
-                          />
-                          <div className="ml-4">
-                            <p className="text-base font-medium text-gray-900">
-                              {item.name}
-                            </p>
-                            {/* <p className="mt-1 text-sm text-gray-500">
+                <Transition
+                  as={Fragment}
+                  enter="transition ease-out duration-200"
+                  enterFrom="opacity-0 translate-y-1"
+                  enterTo="opacity-100 translate-y-0"
+                  leave="transition ease-in duration-150"
+                  leaveFrom="opacity-100 translate-y-0"
+                  leaveTo="opacity-0 translate-y-1"
+                >
+                  <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                    <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                      <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                        {stockage.map((item) => (
+                          <a
+                            key={item.name}
+                            href={item.href}
+                            className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                          >
+                            <item.icon
+                              className="flex-shrink-0 h-6 w-6 text-[#318CE7]"
+                              aria-hidden="true"
+                            />
+                            <div className="ml-4">
+                              <p className="text-base font-medium text-gray-900">
+                                {item.name}
+                              </p>
+                              {/* <p className="mt-1 text-sm text-gray-500">
                                   {item.description}
                                 </p> */}
-                          </div>
-                        </a>
-                      ))}
+                            </div>
+                          </a>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                </Popover.Panel>
-              </Transition>
-            </>
-          )}
-        </Popover>
+                  </Popover.Panel>
+                </Transition>
+              </>
+            )}
+          </Popover>
 
-        {/* Manutention*/}
+          {/* Manutention*/}
 
-        <Popover className="relative">
-          {({ open }) => (
-            <>
-              <Popover.Button
-                className={classNames(
-                  open ? "text-gray-900" : "text-gray-600",
-                  "group bg-white  rounded-md inline-flex items-center text-base font-medium hover:text-[#318CE7] focus:text-[#318CE7] bg-transparent"
-                )}
-              >
-                <span style={{ fontSize: 15, display: "flex" }}>
-                  <RefreshIcon className="h-5 w-5 mr-2" />
-                  Manutention
-                </span>
-                <ChevronDownIcon
+          <Popover className="relative">
+            {({ open }) => (
+              <>
+                <Popover.Button
                   className={classNames(
-                    open ? "text-gray-500" : "text-gray-400",
-                    "ml-2 h-5 w-5 group-hover:text-[#318CE7]"
+                    open ? "text-gray-900" : "text-gray-600",
+                    "group bg-white  rounded-md inline-flex items-center text-base font-medium hover:text-[#318CE7] focus:text-[#318CE7] bg-transparent"
                   )}
-                  aria-hidden="true"
-                />
-              </Popover.Button>
+                >
+                  <span style={{ fontSize: 15, display: "flex" }}>
+                    <RefreshIcon className="h-5 w-5 mr-2" />
+                    Manutention
+                  </span>
+                  <ChevronDownIcon
+                    className={classNames(
+                      open ? "text-gray-500" : "text-gray-400",
+                      "ml-2 h-5 w-5 group-hover:text-[#318CE7]"
+                    )}
+                    aria-hidden="true"
+                  />
+                </Popover.Button>
 
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-200"
-                enterFrom="opacity-0 translate-y-1"
-                enterTo="opacity-100 translate-y-0"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100 translate-y-0"
-                leaveTo="opacity-0 translate-y-1"
-              >
-                <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
-                  <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                    <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                      {Manutention.map((item) => (
-                        <a
-                          key={item.name}
-                          href={item.href}
-                          className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
-                        >
-                          <item.icon
-                            className="flex-shrink-0 h-6 w-6 text-[#318CE7]"
-                            aria-hidden="true"
-                          />
-                          <div className="ml-4">
-                            <p className="text-base font-medium text-gray-900">
-                              {item.name}
-                            </p>
-                            {/* <p className="mt-1 text-sm text-gray-500">
+                <Transition
+                  as={Fragment}
+                  enter="transition ease-out duration-200"
+                  enterFrom="opacity-0 translate-y-1"
+                  enterTo="opacity-100 translate-y-0"
+                  leave="transition ease-in duration-150"
+                  leaveFrom="opacity-100 translate-y-0"
+                  leaveTo="opacity-0 translate-y-1"
+                >
+                  <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                    <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                      <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                        {Manutention.map((item) => (
+                          <a
+                            key={item.name}
+                            href={item.href}
+                            className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                          >
+                            <item.icon
+                              className="flex-shrink-0 h-6 w-6 text-[#318CE7]"
+                              aria-hidden="true"
+                            />
+                            <div className="ml-4">
+                              <p className="text-base font-medium text-gray-900">
+                                {item.name}
+                              </p>
+                              {/* <p className="mt-1 text-sm text-gray-500">
                                   {item.description}
                                 </p> */}
-                          </div>
-                        </a>
-                      ))}
+                            </div>
+                          </a>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                </Popover.Panel>
-              </Transition>
-            </>
-          )}
-        </Popover>
+                  </Popover.Panel>
+                </Transition>
+              </>
+            )}
+          </Popover>
 
-        {/* Service */}
+          {/* Service */}
 
-        <Popover className="relative">
-          {({ open }) => (
-            <>
-              <Popover.Button
-                className={classNames(
-                  open ? "text-gray-900" : "text-gray-600 ",
-                  "group bg-white  rounded-md inline-flex items-center text-base font-medium hover:text-[#318CE7] focus:text-[#318CE7] bg-transparent"
-                )}
-              >
-                <span style={{ fontSize: 15, display: "flex" }}>
-                  <CollectionIcon className="h-5 w-5 mr-2" />
-                  Service
-                </span>
-                <ChevronDownIcon
+          <Popover className="relative">
+            {({ open }) => (
+              <>
+                <Popover.Button
                   className={classNames(
-                    open ? "text-gray-500" : "text-gray-400",
-                    "ml-2 h-5 w-5 group-hover:text-[#318CE7]"
+                    open ? "text-gray-900" : "text-gray-600 ",
+                    "group bg-white  rounded-md inline-flex items-center text-base font-medium hover:text-[#318CE7] focus:text-[#318CE7] bg-transparent"
                   )}
-                  aria-hidden="true"
-                />
-              </Popover.Button>
+                >
+                  <span style={{ fontSize: 15, display: "flex" }}>
+                    <CollectionIcon className="h-5 w-5 mr-2" />
+                    Service
+                  </span>
+                  <ChevronDownIcon
+                    className={classNames(
+                      open ? "text-gray-500" : "text-gray-400",
+                      "ml-2 h-5 w-5 group-hover:text-[#318CE7]"
+                    )}
+                    aria-hidden="true"
+                  />
+                </Popover.Button>
 
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-200"
-                enterFrom="opacity-0 translate-y-1"
-                enterTo="opacity-100 translate-y-0"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100 translate-y-0"
-                leaveTo="opacity-0 translate-y-1"
-              >
-                <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
-                  <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                    <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                      {services.map((item) => (
-                        <a
-                          key={item.name}
-                          href={item.href}
-                          className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
-                        >
-                          <item.icon
-                            className="flex-shrink-0 h-6 w-6 text-[#318CE7]"
-                            aria-hidden="true"
-                          />
-                          <div className="ml-4">
-                            <p className="text-base font-medium text-gray-900">
-                              {item.name}
-                            </p>
-                            {/* <p className="mt-1 text-sm text-gray-500">
+                <Transition
+                  as={Fragment}
+                  enter="transition ease-out duration-200"
+                  enterFrom="opacity-0 translate-y-1"
+                  enterTo="opacity-100 translate-y-0"
+                  leave="transition ease-in duration-150"
+                  leaveFrom="opacity-100 translate-y-0"
+                  leaveTo="opacity-0 translate-y-1"
+                >
+                  <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                    <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                      <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                        {services.map((item) => (
+                          <a
+                            key={item.name}
+                            href={item.href}
+                            className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                          >
+                            <item.icon
+                              className="flex-shrink-0 h-6 w-6 text-[#318CE7]"
+                              aria-hidden="true"
+                            />
+                            <div className="ml-4">
+                              <p className="text-base font-medium text-gray-900">
+                                {item.name}
+                              </p>
+                              {/* <p className="mt-1 text-sm text-gray-500">
                                   {item.description}
                                 </p> */}
-                          </div>
-                        </a>
-                      ))}
+                            </div>
+                          </a>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                </Popover.Panel>
-              </Transition>
-            </>
-          )}
-        </Popover>
+                  </Popover.Panel>
+                </Transition>
+              </>
+            )}
+          </Popover>
+        </div>
       </div>
-
       <Transition
         as={Fragment}
         enter="duration-200 ease-out"
@@ -496,25 +508,6 @@ export default function Navbar() {
                   </Popover.Button>
                 </div>
               </div>
-              <div className="mt-6">
-                <nav className="grid gap-y-8">
-                  {services.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 "
-                    >
-                      <item.icon
-                        className="flex-shrink-0 h-6 w-6 text-blue-600"
-                        aria-hidden="true"
-                      />
-                      <span className="ml-3 text-base font-medium text-gray-900 ">
-                        {item.name}
-                      </span>
-                    </a>
-                  ))}
-                </nav>
-              </div>
             </div>
             <div className="py-6 px-5 space-y-6">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
@@ -522,20 +515,32 @@ export default function Navbar() {
                   href="/"
                   className="text-base font-medium text-gray-900 hover:text-gray-700 "
                 >
-                  Home
+                  ACCUEIL
                 </a>
 
                 <a
-                  href={() => false}
+                  href="/NOUVELLES"
                   className="text-base font-medium text-gray-900 hover:text-gray-700 "
                 >
-                  About us
+                  NOUVELLES
                 </a>
                 <a
-                  href={() => false}
+                  href="/about"
                   className="text-base font-medium text-gray-900 hover:text-gray-700 "
                 >
-                  Contact
+                  À PROPOS DE NOUS
+                </a>
+                <a
+                  href="/gallery"
+                  className="text-base font-medium text-gray-900 hover:text-gray-700 "
+                >
+                  GALERIE
+                </a>
+                <a
+                  href="/contact"
+                  className="text-base font-medium text-gray-900 hover:text-gray-700 "
+                >
+                  CONTACTEZ NOUS
                 </a>
               </div>
               {/* <div>
@@ -552,6 +557,25 @@ export default function Navbar() {
                   </a>
                 </p>
               </div> */}
+            </div>
+            <div className="mt-6 px-5 py-5">
+              <nav className="grid gap-y-8">
+                {services.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 "
+                  >
+                    <item.icon
+                      className="flex-shrink-0 h-6 w-6 text-blue-600"
+                      aria-hidden="true"
+                    />
+                    <span className="ml-3 text-base font-medium text-gray-900 ">
+                      {item.name}
+                    </span>
+                  </a>
+                ))}
+              </nav>
             </div>
           </div>
         </Popover.Panel>
