@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
 import NewsItem from "../data/News.json";
-import img_1 from "../assets/imgs/news/simeza berrechild .jpg";
 
 const News = () => {
   return (
@@ -21,16 +20,20 @@ const News = () => {
           </div> */}
 
           <div class="grid grid-cols-1 gap-12 mt-8 md:mt-16 md:grid-cols-2 xl:grid-cols-4">
-            {NewsItem.map((item) => (
-              <div>
-                <div class="relative">
-                  <img
-                    class="object-cover object-center w-full h-64 rounded-lg lg:h-80"
-                    src={img_1}
-                    alt="news samablue"
-                  />
+            {NewsItem.map((item) => {
+              var fullpath = "Newss/" + item.id;
+              return (
+                <div>
+                  <div class="relative">
+                    <img
+                      class="object-cover object-center w-full h-64 rounded-lg lg:h-80"
+                      src={require("../assets/imgs/news/img_" +
+                        item.id +
+                        ".jpg")}
+                      alt="news samablue"
+                    />
 
-                  {/* <div class="absolute bottom-0 flex p-3 bg-white  ">
+                    {/* <div class="absolute bottom-0 flex p-3 bg-white  ">
                     <img
                       class="object-cover object-center w-10 h-10 rounded-full"
                       src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
@@ -42,27 +45,25 @@ const News = () => {
                       <p class="text-sm text-gray-500 ">Creative Director</p>
                     </div>
                   </div> */}
+                  </div>
+
+                  <h1 class="mt-6 text-xl font-semibold text-gray-800 ">
+                    {item.title}
+                  </h1>
+
+                  <hr class="w-32 my-6 text-blue-500" />
+
+                  <p class="text-sm text-gray-500 ">{item.sub_description}</p>
+
+                  <a
+                    href={fullpath}
+                    class="inline-block mt-4 text-gray-700 font-bold hover:text-blue-400  duration-200 hover:translate-x-3"
+                  >
+                    Read more
+                  </a>
                 </div>
-
-                <h1 class="mt-6 text-xl font-semibold text-gray-800 ">
-                  SIMEZA PARTICIPERA À LA 3ÈME ÉDITION DE BERRECHID (MAROC)
-                </h1>
-
-                <hr class="w-32 my-6 text-blue-500" />
-
-                <p class="text-sm text-gray-500 ">
-                  SIMEZA participera en tant que co-exposant, avec SAMABLUE (son
-                  partenaire dans la région nord-africaine)
-                </p>
-
-                <a
-                  href={() => false}
-                  class="inline-block mt-4 text-gray-700 font-bold hover:text-blue-400  duration-200 hover:translate-x-3"
-                >
-                  Read more
-                </a>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

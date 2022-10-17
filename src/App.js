@@ -16,6 +16,9 @@ import Logistique from "./pages/Services/Logistique";
 import Montage from "./pages/Services/Montage";
 import BureauEtudes from "./pages/Services/BureauEtudes";
 import News from "./pages/News";
+import NewsItem from "./pages/NewsItem";
+import Newss from "./data/News.json";
+import Manutention from "./pages/Manutention";
 
 function App() {
   return (
@@ -38,7 +41,11 @@ function App() {
         <Route path="Montage" element={<Montage />} />
         <Route path="BureauEtudes" element={<BureauEtudes />} />
         <Route path="News" element={<News />} />
-
+        {Newss.map((item) => {
+          var fullpath = "Newss/" + item.id;
+          return <Route path={fullpath} element={<NewsItem object={item} />} />;
+        })}
+        <Route path="Manutention" element={<Manutention />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

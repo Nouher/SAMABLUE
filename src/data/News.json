@@ -1,45 +1,21 @@
 [
+    
     {
-        "title":"samablue",
-        "description": "sama... .. ..",
-        "img":"img_1",
+        "id":"07102022",
+        "title":"SIMEZA PARTICIPERA À LA 3ÈME ÉDITION DE BERRECHID (MAROC)",
+        "description": "SIMEZA participera en tant que co-exposant, avec SAMABLUE (son partenaire dans la région nord-africaine), à la 3ème édition de Berrechid, le Salon National des Céréales et Légumineuses, qui aura lieu du 3 au 6 novembre à Berrechid, au Maroc, sous le thème 'Céréales et Légumineuses et le défi d'assurer la souveraineté alimentaire'. Berrechid organise, avec le Ministère de l'Agriculture, de la Pêche Maritime, du Développement Rural et des Eaux et Forêts, et en partenariat avec la Chambre Régionale d'Agriculture de Casablanca-Settat, le Conseil Régional de Casablanca-Settat, le Conseil Provincial et Municipal et les Communes de la Province de Berrechid, la troisième édition de ce Salon, dont l'objectif principal est de générer une dynamique économique dans la région, la contribution à l'autosuffisance et à la sécurité alimentaire du pays et la réalisation des objectifs attendus de la Stratégie Génération Verte. Si vous souhaitez organiser une visite ou une réunion de travail sur notre stand, veuillez nous contacter à l'adresse wassime.khaoua@simeza.com pour réserver une réunion dans notre agenda.",
+        "sub_description": "SIMEZA participera en tant que co-exposant, avec SAMABLUE (son partenaire dans la région nord-africaine)",
+        "img":"../assets/imgs/news/img_1.jpg",
         "categotry":"com"
     },
     {
-        "title":"samablue",
-        "description": "sama... .. ..",
-        "img":"img1",
-        "categotry":"com"
-    },
-    {
-        "title":"samablue",
-        "description": "sama... .. ..",
-        "img":"img1",
-        "categotry":"com"
-    },
-    {
-        "title":"samablue",
-        "description": "sama... .. ..",
-        "img":"img1",
-        "categotry":"com"
-    },
-    {
-        "title":"samablue",
-        "description": "sama... .. ..",
-        "img":"img1",
-        "categotry":"com"
-    },
-    {
-        "title":"samablue",
-        "description": "sama... .. ..",
-        "img":"img1",
-        "categotry":"com"
-    },
-    {
-        "title":"samablue",
-        "description": "sama... .. ..",
-        "img":"img1",
+        "id":"04102022",
+        "title":"SIMEZA PARTICIPERA À LA 3ÈME ÉDITION DE BERRECHID (MAROC)",
+        "description": "SIMEZA participera en tant que co-exposant, avec SAMABLUE (son partenaire dans la région nord-africaine), à la 3ème édition de Berrechid, le Salon National des Céréales et Légumineuses, qui aura lieu du 3 au 6 novembre à Berrechid, au Maroc, sous le thème 'Céréales et Légumineuses et le défi d'assurer la souveraineté alimentaire'. Berrechid organise, avec le Ministère de l'Agriculture, de la Pêche Maritime, du Développement Rural et des Eaux et Forêts, et en partenariat avec la Chambre Régionale d'Agriculture de Casablanca-Settat, le Conseil Régional de Casablanca-Settat, le Conseil Provincial et Municipal et les Communes de la Province de Berrechid, la troisième édition de ce Salon, dont l'objectif principal est de générer une dynamique économique dans la région, la contribution à l'autosuffisance et à la sécurité alimentaire du pays et la réalisation des objectifs attendus de la Stratégie Génération Verte. Si vous souhaitez organiser une visite ou une réunion de travail sur notre stand, veuillez nous contacter à l'adresse wassime.khaoua@simeza.com pour réserver une réunion dans notre agenda.",
+        "sub_description": "SIMEZA participera en tant que co-exposant, avec SAMABLUE (son partenaire dans la région nord-africaine)",
+        "img":"../assets/imgs/news/img_1.jpg",
         "categotry":"com"
     }
+    
    
 ]

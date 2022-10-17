@@ -90,15 +90,15 @@ const Manutention = [
   {
     name: "La manutention à grains fixe",
     description: "",
-    href: "#",
+    href: "Manutention",
     icon: HomeIcon,
   },
-  {
-    name: "Le convoyeur à chaine",
-    description: "",
-    href: "#",
-    icon: CursorClickIcon,
-  },
+  // {
+  //   name: "Le convoyeur à chaine",
+  //   description: "",
+  //   href: "#",
+  //   icon: CursorClickIcon,
+  // },
 ];
 ///////////////////////////////
 const callsToAction = [
