@@ -82,11 +82,11 @@ export default function Home() {
           <div className="mt-5 sm:mt-8 flex justify-center items-start	gap-5">
             <div className="rounded-md shadow cursor-pointer">
               <a
-                href="/Logistique"
+                href="/Montage"
                 style={{
                   boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)",
                 }}
-                className="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#318CE7] hover:bg-[#318Cc9] md:py-4 md:text-lg md:c"
+                className="w-full flex items-center justify-center px-6 py-5 border border-transparent text-base font-medium rounded-md text-white bg-[#318CE7] hover:bg-[#318Cc9] md:py-4 md:text-lg md:c"
               >
                 Commencer
               </a>
@@ -95,10 +95,30 @@ export default function Home() {
               <a
                 href="/About"
                 style={{ boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)" }}
+                class="inline-flex justify-center items-center p-5 text-base font-medium text-gray-500 bg-gray-50 rounded-lg hover:text-gray-900 hover:bg-gray-100"
+              >
+                <span class="w-full">Plus sur nous</span>
+                <svg
+                  aria-hidden="true"
+                  class="ml-3 w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+              {/* <a
+                href="/About"
+                style={{ boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)" }}
                 className="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-[#318CE7] bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10"
               >
                 Plus sur nous
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
