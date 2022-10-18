@@ -13,18 +13,12 @@ import {
   HomeIcon,
   DatabaseIcon,
   CollectionIcon,
+  MailIcon,
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import lg from "../../assets/icons/samablueg.svg";
 
-const Recrutement = [
-  {
-    name: "La logistique",
-    description: "",
-    href: "#",
-    icon: ShieldCheckIcon,
-  },
-];
+// const Recrutement = [];
 ////////////////////
 const services = [
   {
@@ -102,8 +96,21 @@ const Manutention = [
 ];
 ///////////////////////////////
 const callsToAction = [
-  { name: "Watch Demo", href: "#", icon: PlayIcon },
-  { name: "Contact Sales", href: "#", icon: PhoneIcon },
+  {
+    name: "Regarder la vidéo Demo",
+    href: "https://youtu.be/bOGalrPUDAY",
+    icon: PlayIcon,
+  },
+  {
+    name: "Contacter le service commercial",
+    href: "tel:+212703112627",
+    icon: PhoneIcon,
+  },
+  {
+    name: "Contacter le service commercial",
+    href: "mailto:commercial@samablue.ma",
+    icon: MailIcon,
+  },
 ];
 
 function classNames(...classes) {
@@ -183,9 +190,9 @@ export default function Navbar() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                    <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-4xl sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                        <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                        {/* <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {Recrutement.map((item) => (
                             <a
                               key={item.name}
@@ -200,17 +207,19 @@ export default function Navbar() {
                                 <p className="text-base font-medium text-gray-900">
                                   {item.name}
                                 </p>
-                                {/* <p className="mt-1 text-sm text-gray-500">
+                                <p className="mt-1 text-sm text-gray-500">
                                   {item.description}
-                                </p> */}
+                                </p>
                               </div>
                             </a>
                           ))}
-                        </div>
+                        </div> */}
                         <div className="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                           {callsToAction.map((item) => (
                             <div key={item.name} className="flow-root">
                               <a
+                                target="_blank"
+                                rel="noreferrer"
                                 href={item.href}
                                 className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
                               >

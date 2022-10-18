@@ -1,8 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import p1 from "../assets/imgs/teams/wassime.jpg";
-import p2 from "../assets/imgs/teams/ghizlane.jpg";
-import p3 from "../assets/imgs/teams/wassime.jpg";
+
 import Footer from "../components/Footer/Footer";
 
 const About = () => {
@@ -19,16 +17,15 @@ const About = () => {
                 </h2>
                 <p className="text-base text-gray-700 md:text-lg">
                   S’allie et représente les leaders des solutions de stockage de
-                  céréales, de farines et autres produits industriels : "SIMEZA"
-                  et CESCO", offre ainsi plus de 40 ans d'expérience dans la
-                  conception, la fabrication la commercialisation,
-                  l'installation, l'assistance et l'accompagnement des silos
-                  galvanisés destinés au stockage de grain. L’intégration de nos
-                  silos dans les plus grands projets de stockage nous conforte
-                  en tant que fabricant le plus fiable et engagé du secteur.
-                  Notre service technique adapté à chaque projet et notre usine
-                  à la pointe de la technologie font de SAMABLUE le meilleur
-                  partenaire pour vos projets de stockage.
+                  céréales : "SIMEZA" et CESCO", offre ainsi plus de 40 ans
+                  d'expérience dans la conception, la fabrication la
+                  commercialisation, l'installation, l'assistance et
+                  l'accompagnement des silos galvanisés destinés au stockage de
+                  grain. L’intégration de nos silos dans les plus grands projets
+                  de stockage nous conforte en tant que fabricant le plus fiable
+                  et engagé du secteur. Notre service technique adapté à chaque
+                  projet et notre usine à la pointe de la technologie font de
+                  SAMABLUE le meilleur partenaire pour vos projets de stockage.
                 </p>
               </div>
               {/* <div>
@@ -72,53 +69,6 @@ const About = () => {
           </div>
         </div>
 
-        <div className="grid gap-10 mx-auto sm:grid-cols-2 lg:grid-cols-3 lg:max-w-screen-lg my-20">
-          <div>
-            <img
-              className="object-cover w-24 h-24 rounded-full shadow"
-              src={p1}
-              alt=""
-            />
-            <div className="flex flex-col justify-center mt-2">
-              <p className="text-lg font-bold">Wassime KHAOUA</p>
-              <p className="mb-4 text-xs text-gray-800">CEO</p>
-              <p className="text-sm tracking-wide text-gray-800">
-                Pommy ipsum bent as a nine bob note naff off biscuits nowt, a
-                cuppa unhand me sir hadn't done it in donkey's years sod's law.
-              </p>
-            </div>
-          </div>
-          <div>
-            <img
-              className="object-cover w-24 h-24 rounded-full shadow"
-              src={p2}
-              alt=""
-            />
-            <div className="flex flex-col justify-center mt-2">
-              <p className="text-lg font-bold">Ghizlane JAIL</p>
-              <p className="mb-4 text-xs text-gray-800">Chargée des projets</p>
-              <p className="text-sm tracking-wide text-gray-800">
-                Pommy ipsum bent as a nine bob note naff off biscuits nowt, a
-                cuppa unhand me sir hadn't done it in donkey's years sod's law.
-              </p>
-            </div>
-          </div>
-          <div>
-            <img
-              className="object-cover w-24 h-24 rounded-full shadow"
-              src={p3}
-              alt=""
-            />
-            <div className="flex flex-col justify-center mt-2">
-              <p className="text-lg font-bold">Wassime Khaoua</p>
-              <p className="mb-4 text-xs text-gray-800">CEO</p>
-              <p className="text-sm tracking-wide text-gray-800">
-                Pommy ipsum bent as a nine bob note naff off biscuits nowt, a
-                cuppa unhand me sir hadn't done it in donkey's years sod's law.
-              </p>
-            </div>
-          </div>
-        </div>
         <hr class="my-4 mx-auto w-48 h-1 bg-gray-200 rounded border-0 md:my-10 " />
       </div>
 
