@@ -3,11 +3,58 @@ import bg from "../assets/imgs/bg.jpg";
 import img from "../assets/imgs/img_1.jpg";
 import map_img from "../assets/imgs/map.png";
 import Footer from "../components/Footer/Footer";
-import { ClockIcon } from "@heroicons/react/solid";
+import {
+  ClockIcon,
+  ServerIcon,
+  ChartBarIcon,
+  PhoneIcon,
+  MailIcon,
+  PlayIcon,
+} from "@heroicons/react/solid";
+
+const callsToAction = [
+  {
+    name: "Regarder la vidéo Demo",
+    href: "https://youtu.be/bOGalrPUDAY",
+    icon: PlayIcon,
+  },
+  {
+    name: "Contacter le service commercial",
+    href: "tel:+212703112627",
+    icon: PhoneIcon,
+  },
+  {
+    name: "Contacter le service commercial",
+    href: "mailto:commercial@samablue.ma",
+    icon: MailIcon,
+  },
+];
+
 export default function Home() {
   return (
     <>
       <div className="relative bg-white md:h-[95vh]">
+        <div className=" absolute bottom-4  right-0 ppx-5 py-5 z-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8  	">
+          {callsToAction.map((item) => (
+            <div
+              key={item.name}
+              className="flow-root opacity-70 hover:opacity-90"
+            >
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href={item.href}
+                className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:text-gray-700 bg-gray-100 hover:bg-blue-100"
+              >
+                <item.icon
+                  className="flex-shrink-0 h-6 w-6 text-gray-400"
+                  aria-hidden="true"
+                />
+                <span className="ml-3">{item.name}</span>
+              </a>
+            </div>
+          ))}
+        </div>
         <div className="absolute z-40 mt-28 md:mt-10 ">
           <h1 className="text-[36px] tracking-tight font-extrabold text-gray-900 md:text-[60px] pt-[80px] md:pt-40 text-center mb-10">
             <span
@@ -64,6 +111,7 @@ export default function Home() {
           />
         </div>
       </div>
+
       {/*Section 2*/}
 
       <section class="text-gray-600 body-font ">
@@ -475,7 +523,7 @@ export default function Home() {
             </h1>
           </div>
           <div class="flex flex-wrap -m-4 text-center">
-            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+            <div class="p-4 md:w-1/6 sm:w-1/2 w-full">
               <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
                 <svg
                   fill="none"
@@ -490,12 +538,12 @@ export default function Home() {
                   <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path>
                 </svg>
                 <h2 class="title-font font-medium text-3xl text-gray-900">
-                  255
+                  50
                 </h2>
                 <p class="leading-relaxed">TRAVAILLEURS</p>
               </div>
             </div>
-            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+            <div class="p-4 md:w-1/6 sm:w-1/2 w-full">
               <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
                 <svg
                   fill="none"
@@ -511,23 +559,23 @@ export default function Home() {
                   <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
                 </svg>
                 <h2 class="title-font font-medium text-3xl text-gray-900">
-                  1.3K
+                  4.215K
                 </h2>
                 <p class="leading-relaxed">CLIENTS SATISFAITS</p>
               </div>
             </div>
-            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+            <div class="p-4 md:w-1/6 sm:w-1/2 w-full">
               <div class="border-2 border-gray-200 px-4 py-6 rounded-lg ">
                 <div className="flex justify-center">
                   <ClockIcon className="text-[#318CE7] h-14 w-14 pb-1" />
                 </div>
                 <h2 class="title-font font-medium text-3xl text-gray-900">
-                  12 ANS
+                  51 ANS
                 </h2>
                 <p class="leading-relaxed">DES ANNÉES D’EXPÉRIENCE</p>
               </div>
             </div>
-            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+            <div class="p-4 md:w-1/6 sm:w-1/2 w-full">
               <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
                 <svg
                   fill="none"
@@ -541,14 +589,37 @@ export default function Home() {
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                 </svg>
                 <h2 class="title-font font-medium text-3xl text-gray-900">
-                  24
+                  45
                 </h2>
                 <p class="leading-relaxed">PAYS</p>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/6 sm:w-1/2 w-full">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg ">
+                <div className="flex justify-center">
+                  <ChartBarIcon className="text-[#318CE7] h-14 w-14 pb-1" />
+                </div>
+                <h2 class="title-font font-medium text-3xl text-gray-900">
+                  10.2K
+                </h2>
+                <p class="leading-relaxed">TONNES D'ACIER</p>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/6 sm:w-1/2 w-full">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg ">
+                <div className="flex justify-center">
+                  <ServerIcon className="text-[#318CE7] h-14 w-14 pb-1" />
+                </div>
+                <h2 class="title-font font-medium text-3xl text-gray-900">
+                  480
+                </h2>
+                <p class="leading-relaxed">INSTALLATIONS</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <Footer />
     </>
   );

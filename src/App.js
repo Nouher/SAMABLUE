@@ -12,13 +12,14 @@ import Gallery from "./pages/Gallery";
 import SilosFerme from "./pages/SilosFerme";
 import Accessoires from "./pages/Accessoires";
 import Reservoirs from "./pages/Reservoirs";
-import Logistique from "./pages/Services/Logistique";
 import Montage from "./pages/Services/Montage";
 import BureauEtudes from "./pages/Services/BureauEtudes";
 import News from "./pages/News";
 import NewsItem from "./pages/NewsItem";
 import Newss from "./data/News.json";
-import Manutention from "./pages/Manutention";
+import Convoyeurs from "./pages/Manutention/Convoyeurs";
+import EquipementDeProcede from "./pages/Manutention/EquipementDeProcede";
+import StructuresEnAcier from "./pages/Manutention/StructuresEnAcier";
 
 function App() {
   return (
@@ -37,15 +38,18 @@ function App() {
         <Route path="Gallery" element={<Gallery />} />
         <Route path="Reservoirs" element={<Reservoirs />} />
         {/* Services */}
-        <Route path="Logistique" element={<Logistique />} />
         <Route path="Montage" element={<Montage />} />
         <Route path="BureauEtudes" element={<BureauEtudes />} />
+        {/* Manutention */}
+        <Route path="Convoyeurs" element={<Convoyeurs />} />
+        <Route path="EquipementDeProcede" element={<EquipementDeProcede />} />
+        <Route path="StructuresEnAcier" element={<StructuresEnAcier />} />
+        <Route path="Convoyeurs" element={<Convoyeurs />} />
         <Route path="News" element={<News />} />
         {Newss.map((item) => {
-          var fullpath = "Newss/" + item.id;
+          var fullpath = "/" + item.id;
           return <Route path={fullpath} element={<NewsItem object={item} />} />;
         })}
-        <Route path="Manutention" element={<Manutention />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

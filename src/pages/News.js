@@ -21,7 +21,7 @@ const News = () => {
 
           <div class="grid grid-cols-1 gap-12 mt-8 md:mt-16 md:grid-cols-2 xl:grid-cols-4">
             {NewsItem.map((item) => {
-              var fullpath = "Newss/" + item.id;
+              var fullpath = "/" + item.id;
               return (
                 <div>
                   <div class="relative">
