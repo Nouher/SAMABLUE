@@ -4,7 +4,7 @@ import bg from "../assets/imgs/plana_3.jpg";
 const Header = (props) => {
   return (
     <header
-      class=" h-[25rem] w-full"
+      class="h-[10rem] md:h-[25rem] w-full"
       style={{
         background: `url(${bg})`,
         backgroundRepeat: "no-repeat",
@@ -21,11 +21,8 @@ const Header = (props) => {
       />
       <div class="flex items-center justify-center w-full h-full bg-white bg-opacity-60">
         <h1
-          class="text-2xl font-semibold text-white uppercase lg:text-6xl mt-12"
+          class=" absolute top-[15%] md:top-[30%] left-[50%] text-2xl font-semibold text-white uppercase lg:text-6xl mt-12"
           style={{
-            position: "absolute",
-            top: "30%",
-            left: "50%",
             transform: "translate(-50%,-50%)",
             zIndex: 2,
           }}

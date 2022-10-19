@@ -34,11 +34,11 @@ export default function Home() {
   return (
     <>
       <div className="relative bg-white md:h-[95vh]">
-        <div className=" absolute bottom-4  right-0 ppx-5 py-5 z-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8  	">
+        <div className=" absolute bottom-8 md:bottom-4 w-screen justify-evenly md:justify-end right-0 ppx-5 py-5 z-10  flex sm:space-y-0 space-x-8 sm:space-x-10 px-20 sm:px-8  	">
           {callsToAction.map((item) => (
             <div
               key={item.name}
-              className="flow-root opacity-70 hover:opacity-90"
+              className="flow-root opacity-70 hover:opacity-90 "
             >
               <a
                 target="_blank"
@@ -50,13 +50,13 @@ export default function Home() {
                   className="flex-shrink-0 h-6 w-6 text-gray-400"
                   aria-hidden="true"
                 />
-                <span className="ml-3">{item.name}</span>
+                <span className="ml-3 hidden md:flex">{item.name}</span>
               </a>
             </div>
           ))}
         </div>
         <div className="absolute z-40 mt-28 md:mt-10 ">
-          <h1 className="text-[36px] tracking-tight font-extrabold text-gray-900 md:text-[60px] pt-[80px] md:pt-40 text-center mb-10">
+          <h1 className="text-[36px] tracking-tight font-extrabold text-gray-900 md:text-[60px] pt-[40px] md:pt-40 text-center mb-10">
             <span
               className=" xl:inline text-white"
               style={{ textShadow: "2px 4px 3px rgba(0,0,0,0.3)" }}
@@ -308,7 +308,7 @@ export default function Home() {
                       stroke-linecap="round"
                       stroke-linejoin="round"
                       stroke-width="2"
-                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+                      d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
                     />
                   </svg>
                 </span>
@@ -344,7 +344,7 @@ export default function Home() {
                       stroke-linecap="round"
                       stroke-linejoin="round"
                       stroke-width="2"
-                      d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
                     />
                   </svg>
                 </span>

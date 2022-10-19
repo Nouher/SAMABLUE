@@ -33,7 +33,7 @@ const StockageInterieur = () => {
 
       <section class="bg-white ">
         <div class="container px-6 py-6 mx-auto">
-          <h1 class="text-3xl font-semibold text-center text-gray-800 capitalize xl:text-3xl px-64 lg:text-4xl text-[#318CE7]">
+          <h1 class="text-3xl font-semibold text-center text-gray-800 capitalize xl:text-3xl md:px-64 lg:text-4xl text-[#318CE7]">
             Vous avez un bâtiment existant et vous souhaitez l'exploiter de
             façon à bénéficier d'une capacité de stockage intérieur ?
           </h1>
@@ -48,7 +48,7 @@ const StockageInterieur = () => {
 
       <section class="bg-white ">
         <div class="container flex flex-col px-6 py-10 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
-          <div class=" space-y-7 text-s flex items-start flex-col px-32  ">
+          <div class=" space-y-7 text-s flex items-start flex-col md:px-32  ">
             <p class="flex items-center -mx-2 text-gray-700">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

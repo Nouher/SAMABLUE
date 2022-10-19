@@ -2,52 +2,44 @@ import React from "react";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import {
-  CursorClickIcon,
+  ChartSquareBarIcon,
+  CubeIcon,
+  CogIcon,
+  ChipIcon,
+  ChevronDoubleDownIcon,
+  ChartPieIcon,
+  BriefcaseIcon,
+  BadgeCheckIcon,
+  ArchiveIcon,
+  FilterIcon,
   MenuIcon,
   RefreshIcon,
-  ShieldCheckIcon,
   ViewGridIcon,
   XIcon,
-  HomeIcon,
   DatabaseIcon,
   CollectionIcon,
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import lg from "../../assets/icons/samablueg.svg";
 
-const services = [
-  {
-    name: "le montage",
-    description: "",
-    href: "Montage",
-    icon: CursorClickIcon,
-  },
-  {
-    name: "le bureau d'études",
-    description: "",
-    href: "BureauEtudes",
-    icon: HomeIcon,
-  },
-];
-///////////////////////////
 const stockage = [
   {
     name: "Silos à fond plat",
     description: "",
     href: "SilosFondPlat",
-    icon: HomeIcon,
+    icon: ChevronDoubleDownIcon,
   },
   {
     name: "Silos à fond conique",
     description: "",
     href: "SilosFondConique",
-    icon: CursorClickIcon,
+    icon: FilterIcon,
   },
   {
     name: "Stockage Intérieur",
     description: "",
     href: "StockageInterieur",
-    icon: ShieldCheckIcon,
+    icon: ArchiveIcon,
   },
   {
     name: "Silos de Ferme",
@@ -59,34 +51,50 @@ const stockage = [
     name: "Accessiores",
     description: "",
     href: "Accessoires",
-    icon: RefreshIcon,
+    icon: ChipIcon,
   },
   {
     name: "Réservoirs",
     description: "",
     href: "Reservoirs",
-    icon: RefreshIcon,
+    icon: ChartPieIcon,
   },
 ];
 ///////////////////////////////
+const services = [
+  {
+    name: "le montage",
+    description: "",
+    href: "Montage",
+    icon: CogIcon,
+  },
+  {
+    name: "le bureau d'études",
+    description: "",
+    href: "BureauEtudes",
+    icon: BadgeCheckIcon,
+  },
+];
+///////////////////////////
+
 const Manutention = [
   {
     name: "Convoyeurs",
     description: "",
     href: "Convoyeurs",
-    icon: HomeIcon,
+    icon: CubeIcon,
   },
   {
     name: "Équipement de procédé",
     description: "",
     href: "EquipementDeProcede",
-    icon: CursorClickIcon,
+    icon: BriefcaseIcon,
   },
   {
     name: "Les structures en acier",
     description: "",
     href: "StructuresEnAcier",
-    icon: RefreshIcon,
+    icon: ChartSquareBarIcon,
   },
 ];
 ///////////////////////////////
@@ -419,17 +427,17 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
-            <div className="py-6 px-5 space-y-6">
-              <div className="grid grid-cols-2 gap-y-4 gap-x-8">
+            <div className="mt-0 px-5 py-2">
+              <nav className="grid gap-8 grid-cols-3">
                 <a
                   href="/"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700 "
+                  className=" text-base font-medium text-gray-900 hover:text-gray-700 "
                 >
                   ACCUEIL
                 </a>
 
                 <a
-                  href="/NOUVELLES"
+                  href="/News"
                   className="text-base font-medium text-gray-900 hover:text-gray-700 "
                 >
                   NOUVELLES
@@ -438,7 +446,7 @@ export default function Navbar() {
                   href="/about"
                   className="text-base font-medium text-gray-900 hover:text-gray-700 "
                 >
-                  À PROPOS DE NOUS
+                  À PROPOS
                 </a>
                 <a
                   href="/gallery"
@@ -452,24 +460,45 @@ export default function Navbar() {
                 >
                   CONTACTEZ NOUS
                 </a>
-              </div>
-              {/* <div>
-                <a
-                  href={() => false}
-                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
-                >
-                  Sign up
-                </a>
-                <p className="mt-6 text-center text-base font-medium text-gray-500">
-                  Existing customer?{" "}
-                  <a href={() => false} className="text-indigo-600 hover:text-indigo-500">
-                    Sign in
-                  </a>
-                </p>
-              </div> */}
+              </nav>
             </div>
-            <div className="mt-6 px-5 py-5">
-              <nav className="grid gap-y-8">
+            <div className="py-2 px-5 space-y-6">
+              <div className="grid grid-cols-2 gap-y-2 gap-x-8">
+                <p className="text-sm col-span-2 border-b-2">Stockage</p>
+                {stockage.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 "
+                  >
+                    <item.icon
+                      className="flex-shrink-0 h-6 w-6 text-blue-600"
+                      aria-hidden="true"
+                    />
+                    <span className="ml-3 text-base font-medium text-gray-900 ">
+                      {item.name}
+                    </span>
+                  </a>
+                ))}
+                <p className="text-sm pt-2 col-span-2 border-b-2">
+                  Manutention
+                </p>
+                {Manutention.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 "
+                  >
+                    <item.icon
+                      className="flex-shrink-0 h-6 w-6 text-blue-600"
+                      aria-hidden="true"
+                    />
+                    <span className="ml-3 text-base font-medium text-gray-900 ">
+                      {item.name}
+                    </span>
+                  </a>
+                ))}
+                <p className="text-sm pt-2 col-span-2 border-b-2">Services</p>
                 {services.map((item) => (
                   <a
                     key={item.name}
@@ -485,7 +514,7 @@ export default function Navbar() {
                     </span>
                   </a>
                 ))}
-              </nav>
+              </div>
             </div>
           </div>
         </Popover.Panel>

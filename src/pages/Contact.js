@@ -108,8 +108,10 @@ const Contact = () => {
               Envoyer
             </button>
             <p className="text-xs text-gray-500 mt-3">
-              Chicharrones blog helvetica normcore iceland tousled brook viral
-              artisan.
+              Avez-vous une question, une suggestion ou remarque? Contactez
+              notre service clientèle par téléphone, fax, courriel, lettre ou
+              complétez simplement vos coordonnées au dessus. Nous nous ferrons
+              un plaisir de vous répondre dès que possible.
             </p>
           </div>
         </div>
