@@ -1,6 +1,6 @@
 import React from "react";
 import bg from "../assets/imgs/bg.jpg";
-import img from "../assets/imgs/img_1.jpg";
+import img from "../assets/imgs/bg2.jpg";
 import map_img from "../assets/imgs/map.png";
 import Footer from "../components/Footer/Footer";
 import {

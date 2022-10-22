@@ -63,13 +63,13 @@ const stockage = [
 ///////////////////////////////
 const services = [
   {
-    name: "le montage",
+    name: "Le montage",
     description: "",
     href: "Montage",
     icon: CogIcon,
   },
   {
-    name: "le bureau d'études",
+    name: "Le bureau d'études",
     description: "",
     href: "BureauEtudes",
     icon: BadgeCheckIcon,
