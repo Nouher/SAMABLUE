@@ -1,0 +1,29 @@
+[
+    {
+        "id":1,
+        "question":"Pourquoi nous choisir ?",
+        "answer":"SAMABLUE possède une vaste expérience internationale dans la gestion de grands projets avec un portefeuille complet pour le stockage, la manutention et la transformation du grain, y compris l'expertise technologique dans le broyage à sec. Toujours fidèle à notre proposition de valeur.",
+        "list":[
+            "Concepts intelligents d'installations sur mesure au profit du client",
+            "Ingénierie de base et fine interne, y compris la conception statique des structures en acier",
+            "Conception industrielle du processus de fabrication",
+            "Une attention particulière pour l'efficacité de fonctionnement et l'économie d'énergie",
+            "Ingénierie Espagne et allemande, fabriquée en Europe",
+            "Entreprise familiale, hiérarchie courte, décisions rapides, engagement fort"
+        ]
+    },
+    {
+        "id":2,
+        "question":"Portefeuille de produits ?",
+        "answer":"Nous avons une longue expérience dans l'exécution de projets complexes d'usines internationales.",
+        "list":[
+            "SILOS A FOND PLAT",
+            "SILOS A FOND CONIQUE",
+            "SILOS DE FERME",
+            "DEPOTS D’EAU",
+            "CONVOYEURS",
+            "EQUIPEMENT DE PROCESSUS",
+            "STRUCTURES EN ACIER"
+        ]
+    }
+]

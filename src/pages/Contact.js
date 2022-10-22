@@ -1,8 +1,46 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header";
+import emailjs from "emailjs-com";
+import FAQ from "../components/FAQ";
+import FAQ_data from "../data/FAQ.json";
 
 const Contact = () => {
+  const formRef = useRef();
+  const [user_name, setUser_name] = useState("");
+  const [user_email, setUser_email] = useState("");
+  const [user_message, setUser_message] = useState("");
+  const [done, setUser_Done] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (user_name && user_email && user_message) {
+      emailjs
+        .sendForm(
+          "service_qxpfaug",
+          "template_ic05imb",
+          formRef.current,
+          "12rogMxmwRO0juHc5"
+        )
+        .then(
+          (result) => {
+            console.log(result);
+            setUser_Done(true);
+            Reset();
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    }
+  };
+
+  const Reset = () => {
+    document.getElementById("user_name").value = "";
+    document.getElementById("user_email").value = "";
+    document.getElementById("user_message").value = "";
+  };
+
   return (
     <>
       <Header title="CONTACTEZ NOUS" />
@@ -63,7 +101,11 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="lg:w-1/3 md:w-1/2 bg-white  flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="lg:w-1/3 md:w-1/2 bg-white  flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0"
+          >
             <h2 className="text-gray-900  text-2xl mb-1 font-medium title-font">
               Contactez-Nous
             </h2>
@@ -78,8 +120,12 @@ const Contact = () => {
               </label>
               <input
                 type="text"
-                id="name"
-                name="name"
+                id="user_name"
+                name="user_name"
+                value={user_name}
+                onChange={(e) => {
+                  setUser_name(e.target.value);
+                }}
                 className="w-full bg-white  rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
@@ -89,8 +135,12 @@ const Contact = () => {
               </label>
               <input
                 type="email"
-                id="email"
-                name="email"
+                id="user_email"
+                name="user_email"
+                value={user_email}
+                onChange={(e) => {
+                  setUser_email(e.target.value);
+                }}
                 className="w-full bg-white  rounded border border-gray-300  focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
@@ -99,8 +149,12 @@ const Contact = () => {
                 Message
               </label>
               <textarea
-                id="message"
-                name="message"
+                id="user_message"
+                name="user_message"
+                value={user_message}
+                onChange={(e) => {
+                  setUser_message(e.target.value);
+                }}
                 className="w-full bg-white  rounded border border-gray-300  focus:border-blue-500 focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               ></textarea>
             </div>
@@ -113,199 +167,33 @@ const Contact = () => {
               complétez simplement vos coordonnées au dessus. Nous nous ferrons
               un plaisir de vous répondre dès que possible.
             </p>
-          </div>
+            {done && (
+              <div
+                class="mt-6 p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
+                role="alert"
+              >
+                <span class="font-medium">Envoyé!</span> Merci de nous
+                contacter.
+              </div>
+            )}
+          </form>
         </div>
       </section>
 
-      <section class="bg-white ">
+      <section class="bg-white mb-20">
         <div class="container max-w-4xl px-6 py-10 mx-auto">
           <h1 class="text-5xl font-semibold text-center text-gray-800">
             FAQ's
           </h1>
 
           <div class="mt-12 space-y-8">
-            <div class="border-2 border-gray-100 rounded-lg ">
-              <button
-                class="flex items-center justify-between w-full p-8"
-                onClick={() => {
-                  document.getElementById("Q1").classList.toggle("hidden");
-                  document.querySelector(".moin").classList.toggle("hidden");
-                  document.querySelector(".plus").classList.toggle("hidden");
-                  document
-                    .querySelector(".icon")
-                    .classList.toggle("bg-[#3B82F6]");
-                  document
-                    .querySelector(".icon")
-                    .classList.toggle("text-[#fff]");
-                }}
-              >
-                <h1 class="font-semibold text-gray-700 ">
-                  How i can play for my appoinment ?
-                </h1>
-
-                <span class="text-gray-400 bg-gray-200 rounded-full icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-6 h-6 moin "
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M18 12H6"
-                    ></path>
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-6 h-6 plus hidden"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                    />
-                  </svg>
-                </span>
-              </button>
-
-              <hr class="border-gray-200 " />
-
-              <p id="Q1" class="p-8 text-sm text-gray-500 hidden">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Voluptas eaque nobis, fugit odit omnis fugiat deleniti animi ab
-                maxime cum laboriosam recusandae facere dolorum veniam quia
-                pariatur obcaecati illo ducimus?
-              </p>
-            </div>
-
-            <div class="border-2 border-gray-100 rounded-lg ">
-              <button
-                class="flex items-center justify-between w-full p-8"
-                onClick={() => {
-                  document.getElementById("Q2").classList.toggle("hidden");
-                  document.querySelector(".moin-2").classList.toggle("hidden");
-                  document.querySelector(".plus-2").classList.toggle("hidden");
-                  document
-                    .querySelector(".icon-2")
-                    .classList.toggle("bg-[#3B82F6]");
-                  document
-                    .querySelector(".icon-2")
-                    .classList.toggle("text-[#fff]");
-                }}
-              >
-                <h1 class="font-semibold text-gray-700">
-                  How i can play for my appoinment ?
-                </h1>
-
-                <span class="text-gray-400 bg-gray-200 rounded-full icon-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-6 h-6 moin-2 "
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M18 12H6"
-                    ></path>
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-6 h-6 plus-2 hidden"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                    />
-                  </svg>
-                </span>
-              </button>
-
-              <hr class="border-gray-200 " />
-
-              <p id="Q2" class="p-8 text-sm text-gray-500 hidden">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Voluptas eaque nobis, fugit odit omnis fugiat deleniti animi ab
-                maxime cum laboriosam recusandae facere dolorum veniam quia
-                pariatur obcaecati illo ducimus?
-              </p>
-            </div>
-
-            <div class="border-2 border-gray-100 rounded-lg ">
-              <button
-                class="flex items-center justify-between w-full p-8"
-                onClick={() => {
-                  document.getElementById("Q3").classList.toggle("hidden");
-                  document.querySelector(".moin-3").classList.toggle("hidden");
-                  document.querySelector(".plus-3").classList.toggle("hidden");
-                  document
-                    .querySelector(".icon-3")
-                    .classList.toggle("bg-[#3B82F6]");
-                  document
-                    .querySelector(".icon-3")
-                    .classList.toggle("text-[#fff]");
-                }}
-              >
-                <h1 class="font-semibold text-gray-700 ">
-                  How i can play for my appoinment ?
-                </h1>
-
-                <span class="text-gray-400 bg-gray-200 rounded-full icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-6 h-6 moin-3 "
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M18 12H6"
-                    ></path>
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-6 h-6 plus-3 hidden"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                    />
-                  </svg>
-                </span>
-              </button>
-
-              <hr class="border-gray-200 " />
-
-              <p id="Q3" class="p-8 text-sm text-gray-500  hidden">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Voluptas eaque nobis, fugit odit omnis fugiat deleniti animi ab
-                maxime cum laboriosam recusandae facere dolorum veniam quia
-                pariatur obcaecati illo ducimus?
-              </p>
-            </div>
+            {FAQ_data.map((item) => (
+              <FAQ
+                question={item.question}
+                answer={item.answer}
+                list={item.list}
+              />
+            ))}
           </div>
         </div>
       </section>
