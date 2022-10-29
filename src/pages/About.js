@@ -1,7 +1,9 @@
 import React from "react";
 import Header from "../components/Header";
-
 import Footer from "../components/Footer/Footer";
+import img_1 from '../assets/imgs/about/img_1.jpeg'
+import img_2 from '../assets/imgs/about/img_2.jpeg'
+import img_3 from '../assets/imgs/about/img_3.jpeg'
 
 const About = () => {
   return (
@@ -16,52 +18,33 @@ const About = () => {
                   SAMABLUE
                 </h2>
                 <p className="text-base text-gray-700 md:text-lg">
-                  S’allie et représente les leaders des solutions de stockage de
-                  céréales : "SIMEZA" et CESCO", offre ainsi plus de 40 ans
-                  d'expérience dans la conception, la fabrication la
-                  commercialisation, l'installation, l'assistance et
-                  l'accompagnement des silos galvanisés destinés au stockage de
-                  grain. L’intégration de nos silos dans les plus grands projets
-                  de stockage nous conforte en tant que fabricant le plus fiable
-                  et engagé du secteur. Notre service technique adapté à chaque
-                  projet et notre usine à la pointe de la technologie font de
-                  SAMABLUE le meilleur partenaire pour vos projets de stockage.
+                SAMABLUE s’allie aux leaders européens des solutions de stockage de céréales,  "SIMEZA" et CESCO", offre ainsi plus de 40 ans d'expérience dans la conception, la fabrication la commercialisation, l'installation, l'assistance et l'accompagnement des silos galvanisés destinés au stockage de grain.
+                <br/>
+                <br/>
+                L’intégration de nos silos dans les plus grands projets de stockage nous conforte en tant que fabricant le plus fiable et engagé du secteur.
+                <br/>
+                Notre service technique adapté à chaque projet et notre usine à la pointe de la technologie font de SAMABLUE le meilleur partenaire pour vos projets de stockage au nord d'afrique.
                 </p>
               </div>
-              {/* <div>
-                <a
-                  href="/"
-                  aria-label=""
-                  className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-                >
-                  Learn more
-                  <svg
-                    className="inline-block w-3 ml-2"
-                    fill="currentColor"
-                    viewBox="0 0 12 12"
-                  >
-                    <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
-                  </svg>
-                </a>
-              </div> */}
+             
             </div>
             <div className="flex items-center justify-center -mx-4 lg:pl-8">
               <div className="flex flex-col items-end px-3">
                 <img
                   className="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
-                  src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                  src={img_1}
                   alt=""
                 />
                 <img
                   className="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40"
-                  src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                  src={img_2}
                   alt=""
                 />
               </div>
               <div className="px-3">
                 <img
                   className="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80"
-                  src="https://images.pexels.com/photos/3182739/pexels-photo-3182739.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500"
+                  src={img_3}
                   alt=""
                 />
               </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import img from "../assets/imgs/lateral_1.jpg";
+import img from "../assets/imgs/silosFerme.jpg";
 import Footer from "../components/Footer/Footer";
 
 const SilosFerme = () => {
