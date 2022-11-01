@@ -1,12 +1,10 @@
 import React from "react";
-import Header from "../components/Header";
 import Footer from "../components/Footer/Footer";
 import img from "../assets/imgs/accesorios.jpg";
 
 const StockageInterieur = () => {
   return (
     <>
-      <Header title="STOCKAGE INTÉRIEUR" />
       <section class="bg-white  pt-[80px]">
         <div class="container px-6 py-16 mx-auto text-center">
           <div class="max-w-5xl mx-auto">
@@ -33,7 +31,7 @@ const StockageInterieur = () => {
 
       <section class="bg-white ">
         <div class="container px-6 py-6 mx-auto">
-          <h1 class="text-3xl font-semibold text-center text-gray-800 capitalize xl:text-3xl md:px-64 lg:text-4xl text-[#318CE7]">
+          <h1 class="text-3xl font-semibold text-center  capitalize xl:text-3xl md:px-64 lg:text-4xl text-[#318CE7]">
             Vous avez un bâtiment existant et vous souhaitez l'exploiter de
             façon à bénéficier d'une capacité de stockage intérieur ?
           </h1>

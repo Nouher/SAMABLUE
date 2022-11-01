@@ -2,12 +2,10 @@ import React from "react";
 import img from "../assets/imgs/lateral_3.jpg";
 import img2 from "../assets/imgs/reductor_2.jpg";
 import Footer from "../components/Footer/Footer";
-import Header from "../components/Header";
 
 const Accessoires = () => {
   return (
     <>
-      <Header title="ACCESSOIRES" />
       <section class="bg-white ">
         <div class="container px-6 pt-32 mx-auto">
           <div class="lg:-mx-6 lg:flex lg:items-center">

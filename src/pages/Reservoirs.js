@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../components/Header";
 import img1 from "../assets/imgs/lateral_1.jpg";
 import img2 from "../assets/imgs/lateral_2.jpg";
 import img3 from "../assets/imgs/lateral_3.jpg";
@@ -8,12 +7,11 @@ import Footer from "../components/Footer/Footer";
 const Reservoirs = () => {
   return (
     <>
-      <Header title="Réservoirs" />
-      <div className="px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div className="px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pb-20 lg:pt-48">
         <div className="grid gap-10 lg:grid-cols-2">
           <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
             <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-teal-accent-400">
-              <svg className="text-teal-900 w-7 h-7" viewBox="0 0 24 24">
+              <svg className="text-[#318CE7] w-7 h-7" viewBox="0 0 24 24">
                 <polyline
                   fill="none"
                   stroke="currentColor"
@@ -56,7 +54,7 @@ const Reservoirs = () => {
               </svg>
             </div>
             <div className="max-w-xl mb-6">
-              <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none text-[#318CE7]s">
+              <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight  sm:text-4xl sm:leading-none text-[#318CE7]">
                 Les réservoirs SAMABLUE
               </h2>
               <p className="text-base text-gray-700 md:text-lg">

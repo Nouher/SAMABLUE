@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../components/Header";
 import Footer from "../components/Footer/Footer";
 import img from "../assets/imgs/plana_3.jpg";
 import img2 from "../assets/imgs/plana_6.jpg";
@@ -7,7 +6,6 @@ import img2 from "../assets/imgs/plana_6.jpg";
 const SilosFondConique = () => {
   return (
     <>
-      <Header title="SILOS À FOND CONIQUE" />
       <section class="bg-white  pt-[80px]">
         <div class="container px-6 py-16 mx-auto text-center">
           <div class="max-w-5xl mx-auto">

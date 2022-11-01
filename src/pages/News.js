@@ -1,11 +1,9 @@
 import React from "react";
-import Header from "../components/Header";
 import NewsItem from "../data/News.json";
 
 const News = () => {
   return (
     <>
-      <Header title="NOUVELLES" />
       <section class="bg-white">
         <div class="container px-6 py-10 mx-auto">
           <div class="grid grid-cols-1 gap-12 mt-8 md:mt-16 md:grid-cols-2 xl:grid-cols-4">

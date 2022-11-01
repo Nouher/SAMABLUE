@@ -168,7 +168,7 @@ const Footer = () => {
                   </a>
                 </div>
                 <div>
-                  <h3 className="text-gray-700 uppercase  ">Manutention</h3>
+                  <h3 className="text-gray-700 uppercase  ">Nos Produits</h3>
                   <a
                     href="Convoyeurs"
                     className="block mt-2 text-sm text-gray-600 hover:underline"
@@ -197,10 +197,10 @@ const Footer = () => {
                     Le montage
                   </a>
                   <a
-                    href="BureauEtudes"
+                    href="Ingenierie"
                     className="block mt-2 text-sm text-gray-600  hover:underline"
                   >
-                    Music
+                    Ingénierie
                   </a>
                 </div>
 

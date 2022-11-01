@@ -1,13 +1,12 @@
 import React from "react";
-import Header from "../../components/Header";
-import img from "../../assets/imgs/plana_techo_8.jpg";
+import img from "../../assets/imgs/plana_6.jpg";
 import Footer from "../../components/Footer/Footer";
 
 const Montage = () => {
   return (
     <>
-      <Header title="LE MONTAGE" />
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      
+      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-48 ">
         <div className="grid gap-5 row-gap-10 lg:grid-cols-2">
           <div className="flex flex-col justify-center">
             <div className="max-w-xl mb-6">
@@ -152,24 +151,7 @@ const Montage = () => {
                   </span>
                   Utilisateurs d’outils de levage certifiés.
                 </li>
-                <li className="flex">
-                  <span className="mr-1">
-                    <svg
-                      className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                      stroke="currentColor"
-                      viewBox="0 0 52 52"
-                    >
-                      <polygon
-                        strokeWidth="4"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        fill="none"
-                        points="29 13 14 29 25 29 23 39 38 23 27 23"
-                      />
-                    </svg>
-                  </span>
-                  A votre service pour les locations de grues, nacelles,…
-                </li>
+                
               </ul>
             </div>
           </div>

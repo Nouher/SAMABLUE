@@ -1,13 +1,11 @@
 import React from "react";
 import Footer from "../../components/Footer/Footer";
-import Header from "../../components/Header";
 import img from "../../assets/imgs/simeza_0.jpg";
 
-const BureauEtudes = () => {
+const Ingenierie = () => {
   return (
     <>
-      <Header title="LE BUREAU D'ÉTUDES" />
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pb-20 lg:pt-48">
         <div className="grid gap-5 row-gap-8 lg:grid-cols-2">
           <div className="flex flex-col justify-center">
             <div className="max-w-xl mb-6">
@@ -318,4 +316,4 @@ const BureauEtudes = () => {
   );
 };
 
-export default BureauEtudes;
+export default Ingenierie;

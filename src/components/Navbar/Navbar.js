@@ -13,11 +13,11 @@ import {
   ArchiveIcon,
   FilterIcon,
   MenuIcon,
-  RefreshIcon,
   ViewGridIcon,
   XIcon,
   DatabaseIcon,
   CollectionIcon,
+  ShoppingBagIcon
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import lg from "../../assets/icons/samablueg.svg";
@@ -69,15 +69,15 @@ const services = [
     icon: CogIcon,
   },
   {
-    name: "Le bureau d'études",
+    name: "Ingénierie",
     description: "",
-    href: "BureauEtudes",
+    href: "Ingenierie",
     icon: BadgeCheckIcon,
   },
 ];
 ///////////////////////////
 
-const Manutention = [
+const NosProduits = [
   {
     name: "Convoyeurs",
     description: "",
@@ -202,13 +202,13 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* SubMenu */}
+      {/* SubMenu */} 
 
       {/* Stockage */}
       <div>
         <div
           id="submenu"
-          className="bg-[rgba(255,255,255,.8)] h-10 hidden md:flex justify-center md:justify-end items-center mt-[0px] gap-5 p-6 fixed right-[100px] top-[140px] rounded-md"
+          className="bg-[rgba(237,246,249,0.7)] h-10 hidden md:flex justify-center md:justify-end items-center mt-[0px] gap-5 p-6 fixed right-[100px] top-[140px] rounded-md"
         >
           <Popover className="relative">
             {({ open }) => (
@@ -271,7 +271,7 @@ export default function Navbar() {
             )}
           </Popover>
 
-          {/* Manutention*/}
+          {/* Nos Produits*/}
 
           <Popover className="relative">
             {({ open }) => (
@@ -283,8 +283,8 @@ export default function Navbar() {
                   )}
                 >
                   <span style={{ fontSize: 15, display: "flex" }}>
-                    <RefreshIcon className="h-5 w-5 mr-2" />
-                    Manutention
+                    <ShoppingBagIcon className="h-5 w-5 mr-2" />
+                    Nos Produits
                   </span>
                   <ChevronDownIcon
                     className={classNames(
@@ -307,7 +307,7 @@ export default function Navbar() {
                   <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                     <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                       <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                        {Manutention.map((item) => (
+                        {NosProduits.map((item) => (
                           <a
                             key={item.name}
                             href={item.href}
@@ -428,7 +428,7 @@ export default function Navbar() {
               </div>
             </div>
             <div className="mt-0 px-5 py-2">
-              <nav className="grid gap-8 grid-cols-3">
+              <nav className="grid gap-8 grid-cols-3 ">
                 <a
                   href="/"
                   className=" text-base font-medium text-gray-900 hover:text-gray-700 "
@@ -481,9 +481,9 @@ export default function Navbar() {
                   </a>
                 ))}
                 <p className="text-sm pt-2 col-span-2 border-b-2">
-                  Manutention
+                Nos Produits
                 </p>
-                {Manutention.map((item) => (
+                {NosProduits.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}

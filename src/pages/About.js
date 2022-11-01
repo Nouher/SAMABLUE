@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../components/Header";
 import Footer from "../components/Footer/Footer";
 import img_1 from '../assets/imgs/about/img_1.jpeg'
 import img_2 from '../assets/imgs/about/img_2.jpeg'
@@ -8,7 +7,6 @@ import img_3 from '../assets/imgs/about/img_3.jpeg'
 const About = () => {
   return (
     <>
-      <Header title="ABOUT US" />
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
           <div className="grid gap-10 lg:grid-cols-2">

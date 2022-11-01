@@ -1,12 +1,10 @@
 import React from "react";
 import Footer from "../../components/Footer/Footer";
-import Header from "../../components/Header";
 
 const StructuresEnAcier = () => {
   return (
     <>
-      <Header title="Structures En Acier" />
-      <section class="bg-white mb-20 ">
+      <section class="bg-white mb-20 pt-28">
         <div class="container px-6 py-10 mx-auto">
           <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3">
             <div class="space-y-3">

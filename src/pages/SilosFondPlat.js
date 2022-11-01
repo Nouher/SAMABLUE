@@ -1,12 +1,10 @@
 import React from "react";
 import img from "../assets/imgs/plana_4.jpg";
 import Footer from "../components/Footer/Footer";
-import Header from "../components/Header";
 
 const SilosFondPlat = () => {
   return (
     <>
-      <Header title="SILOS À FOND PLAT" />
       <section className="text-gray-600 body-font pt-20">
         <div className="container px-5 pt-24 mx-auto flex flex-wrap">
           <div className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">

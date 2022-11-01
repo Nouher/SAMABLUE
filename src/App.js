@@ -13,13 +13,13 @@ import SilosFerme from "./pages/SilosFerme";
 import Accessoires from "./pages/Accessoires";
 import Reservoirs from "./pages/Reservoirs";
 import Montage from "./pages/Services/Montage";
-import BureauEtudes from "./pages/Services/BureauEtudes";
+import Ingenierie from "./pages/Services/Ingenierie";
 import News from "./pages/News";
 import NewsItem from "./pages/NewsItem";
 import Newss from "./data/News.json";
-import Convoyeurs from "./pages/Manutention/Convoyeurs";
-import EquipementDeProcede from "./pages/Manutention/EquipementDeProcede";
-import StructuresEnAcier from "./pages/Manutention/StructuresEnAcier";
+import Convoyeurs from "./pages/Produits/Convoyeurs";
+import EquipementDeProcede from "./pages/Produits/EquipementDeProcede";
+import StructuresEnAcier from "./pages/Produits/StructuresEnAcier";
 
 function App() {
   return (
@@ -39,7 +39,7 @@ function App() {
         <Route path="Reservoirs" element={<Reservoirs />} />
         {/* Services */}
         <Route path="Montage" element={<Montage />} />
-        <Route path="BureauEtudes" element={<BureauEtudes />} />
+        <Route path="Ingenierie" element={<Ingenierie />} />
         {/* Manutention */}
         <Route path="Convoyeurs" element={<Convoyeurs />} />
         <Route path="EquipementDeProcede" element={<EquipementDeProcede />} />

@@ -18,12 +18,10 @@ import img16 from "../assets/imgs/gallery/img_16.jpg";
 import img17 from "../assets/imgs/gallery/img_17.jpg";
 import img18 from "../assets/imgs/gallery/img_18.jpg";
 import Footer from "../components/Footer/Footer";
-import Header from "../components/Header";
 
 const Gallery = () => {
   return (
     <>
-      <Header title="GALERIE" />
       <section class="text-gray-600 body-font pt-20">
         <div class="container px-5 py-24 mx-auto flex flex-wrap">
           {/* <div class="flex w-full mb-20 flex-wrap">

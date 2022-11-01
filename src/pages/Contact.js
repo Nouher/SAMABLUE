@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import Footer from "../components/Footer/Footer";
-import Header from "../components/Header";
 import emailjs from "emailjs-com";
 import FAQ from "../components/FAQ";
 import FAQ_data from "../data/FAQ.json";
@@ -43,8 +42,7 @@ const Contact = () => {
 
   return (
     <>
-      <Header title="CONTACTEZ NOUS" />
-      <section className="text-gray-600  body-font relative ">
+      <section className="text-gray-600  body-font relative pt-12">
         <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
           <div
             className="lg:w-2/3 md:w-1/2  rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative"
