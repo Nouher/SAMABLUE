@@ -82,7 +82,7 @@ export default function Home() {
           <div className="mt-5 sm:mt-8 flex justify-center items-start	gap-5">
             <div className="rounded-md shadow cursor-pointer">
               <a
-                href="/Montage"
+                href="/Convoyeurs"
                 style={{
                   boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)",
                 }}
