@@ -17,7 +17,7 @@ export default function Banner() {
               <PhoneIcon className="h-5 w-5 text-white" aria-hidden="true" />
             </span>
             <a
-              href="tel:+34635062736"
+              href="tel:+2126 00 84 60 02"
               target="_blank"
               rel="noreferrer"
               className="ml-2 mr-5 font-medium text-white truncate cursor-pointer"
